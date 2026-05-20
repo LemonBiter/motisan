@@ -1,0 +1,121 @@
+{
+  "slug": "unidoor",
+  "name": "UniDoor",
+  "category": "Doors",
+  "subtitle": "Pre-hung steel door for insulated panel systems.",
+  "description": "Australian engineered and pre-hung for fast, easy installation. DDA compatible, airtight, durable and built for performance in cleanrooms, insulated panel rooms and steel frame buildings.",
+  "heroImage": "/images/products/unidoor/hero.png",
+
+  "features": [
+    "Pre-hung design for quick and easy installation",
+    "Airtight sealing with automatic drop-down seal",
+    "Fire-resistant rockwool core",
+    "DDA compliant for inclusive buildings",
+    "UV-resistant powder coat finish"
+  ],
+
+  "applications": [
+    "Cleanrooms",
+    "Cold Storage",
+    "Food & Beverage",
+    "Pharmaceutical",
+    "Industrial Facilities",
+    "Steel Frame Buildings"
+  ],
+
+  "specifications": {
+    "structuralMaterial": "Galvanised steel",
+    "steelThickness": {
+      "doorLeaf": "0.8mm",
+      "doorFrame": "1.5mm"
+    },
+    "finish": "UV-Resistant Powder Coating",
+    "infillInsulation": {
+      "material": "Fire-resistant Rockwool (Mineral Wool)",
+      "rValue": "1.40 m²K/w"
+    },
+    "hinges": "3 Stainless Steel Hinges"
+  },
+
+  "sizes": [
+    {
+      "doorLeaf": "820×2060×50",
+      "clearOpening": "790×2045"
+    },
+    {
+      "doorLeaf": "920×2060×50",
+      "clearOpening": "890×2045"
+    },
+    {
+      "doorLeaf": "1020×2060×50",
+      "clearOpening": "990×2045"
+    }
+  ],
+
+  "options": [
+    "Double-glazing view windows",
+    "Stainless steel kick plates",
+    "Powder coating in various colours",
+    "Custom sizes available"
+  ],
+
+  "locks": [
+    "Lever",
+    "DDA Compliant",
+    "Mortice"
+  ],
+
+  "colours": [
+    {
+      "name": "PC Monument",
+      "image": "/images/products/unidoor/colours/monument.png"
+    },
+    {
+      "name": "PC Surfmist",
+      "image": "/images/products/unidoor/colours/surfmist.png"
+    },
+    {
+      "name": "PC Windspray",
+      "image": "/images/products/unidoor/colours/windspray.png"
+    },
+    {
+      "name": "PC Basalt",
+      "image": "/images/products/unidoor/colours/basalt.png"
+    },
+    {
+      "name": "Light Oak",
+      "image": "/images/products/unidoor/colours/light-oak.png"
+    }
+  ],
+
+  "downloads": [
+    {
+      "title": "UniDoor Datasheet",
+      "file": "/downloads/unidoor-datasheet.pdf"
+    },
+    {
+      "title": "Installation Guide",
+      "file": "/downloads/unidoor-installation.pdf"
+    }
+  ],
+
+  "gallery": [
+    "/images/products/unidoor/unidoor-1.jpg",
+    "/images/products/unidoor/unidoor-2.jpg",
+    "/images/products/unidoor/unidoor-3.jpg",
+    "/images/products/unidoor/unidoor-4.jpg",
+    "/images/products/unidoor/unidoor-5.jpg"
+  ],
+
+  "seo": {
+    "title": "UniDoor | Pre-hung Steel Door for Insulated Panel Systems",
+    "description": "Australian engineered pre-hung steel insulated panel doors for cleanrooms, cold rooms and industrial buildings.",
+    "keywords": [
+      "steel door",
+      "cleanroom door",
+      "insulated panel door",
+      "industrial door",
+      "pre-hung door"
+    ]
+  }
+}

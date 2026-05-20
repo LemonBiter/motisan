@@ -1,0 +1,19 @@
+[
+  {
+    "slug": "unidoor",
+    "name": "UniDoor",
+    "category": "Doors",
+    "thumbnail": "/images/products/unidoor/thumb.png",
+    "subtitle": "Pre-hung insulated panel door"
+  },
+
+  {
+    "slug": "sectional-door",
+
+    "name": "Sectional Door",
+
+    "category": "Doors",
+
+    "subtitle": "Industrial insulated sectional doors"
+  }
+]

@@ -1,0 +1,285 @@
+// src/app/products/[slug]/page.tsx
+
+import Image from "next/image";
+import Link from "next/link";
+import {
+  ChevronRight,
+  Download,
+  ShieldCheck,
+  Accessibility,
+  Wrench,
+  Factory,
+  CheckCircle2,
+} from "lucide-react";
+
+import productList from "@/data/products/json/index.json";
+import ProductGallery from "@/components/product/ProductGallery";
+
+export default async function ProductPage({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+  let product;
+  try {
+    product = await import(`@/data/products/json/${slug}.json`).then(
+      (mod) => mod.default,
+    );
+  } catch (error) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        {slug} not found
+      </div>
+    );
+  }
+  // const product = await import(`@/data/products/json/${slug}.json`).then((mod) => mod.default);
+
+  if (!product) {
+    return (
+      <div className="flex min-h-screen items-center justify-center">
+        product not found
+      </div>
+    );
+  }
+
+  return (
+    <main className="bg-[#f7f7f7]">
+      {/* breadcrumb */}
+      <section className="border-b border-gray-200 bg-white">
+        <div className="mx-auto max-w-[1440px] px-5 py-5 lg:px-10">
+          <div className="flex flex-wrap items-center gap-2 text-sm text-gray-500">
+            <Link href="/">Home</Link>
+
+            <ChevronRight className="h-4 w-4" />
+
+            <Link href="/products">Products</Link>
+
+            <ChevronRight className="h-4 w-4" />
+
+            <span>{product.category}</span>
+
+            <ChevronRight className="h-4 w-4" />
+
+            <span className="font-medium text-[#0A2A66]">{product.name}</span>
+          </div>
+        </div>
+      </section>
+
+      {/* hero */}
+      <section className="bg-white">
+        <div className="mx-auto grid max-w-[1440px] grid-cols-1 lg:grid-cols-2">
+          {/* left */}
+          <div className="flex flex-col justify-start px-5 py-12 lg:px-10 lg:py-20 bg-[#fafafa]">
+            <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
+              {product.category}
+            </p>
+
+            <h1 className="text-5xl font-semibold leading-[0.95] tracking-tight text-[#0A2A66] lg:text-7xl">
+              {product.name}
+            </h1>
+
+            <h2 className="mt-6 max-w-[500px] text-2xl font-semibold leading-snug text-gray-800">
+              {product.subtitle}
+            </h2>
+
+            <p className="mt-6 max-w-[560px] text-base leading-8 text-gray-600">
+              {product.description}
+            </p>
+
+            {/* buttons */}
+            <div className="mt-10 flex flex-col gap-4 sm:flex-row">
+              <button className="rounded-xl bg-[#0145a7] px-8 py-4 font-semibold text-white transition hover:bg-[#0A2A66]">
+                Request Quote
+              </button>
+
+              <button className="flex items-center justify-center gap-2 rounded-xl border border-[#0A2A66] px-8 py-4 font-semibold text-[#0A2A66] transition hover:bg-[#0A2A66] hover:text-white">
+                Download Datasheet
+                <Download className="h-5 w-5" />
+              </button>
+            </div>
+
+            {/* icons */}
+            <div className="mt-12 grid grid-cols-2 gap-6 sm:grid-cols-4">
+              <div className="flex flex-col items-center text-center">
+                <ShieldCheck className="h-8 w-8 text-[#0A2A66]" />
+
+                <p className="mt-3 text-sm font-medium text-gray-700">
+                  Australian Engineered
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center text-center">
+                <Accessibility className="h-8 w-8 text-[#0A2A66]" />
+
+                <p className="mt-3 text-sm font-medium text-gray-700">
+                  DDA Compatible
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center text-center">
+                <Wrench className="h-8 w-8 text-[#0A2A66]" />
+
+                <p className="mt-3 text-sm font-medium text-gray-700">
+                  Pre-hung Installation
+                </p>
+              </div>
+
+              <div className="flex flex-col items-center text-center">
+                <Factory className="h-8 w-8 text-[#0A2A66]" />
+
+                <p className="mt-3 text-sm font-medium text-gray-700">
+                  Built for Performance
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <ProductGallery images={product.gallery} productName={product.name} />
+          {/* <div className="border-l border-gray-200 bg-[#fafafa]">
+            <div className="relative aspect-square">
+              <Image
+                src={product.gallery?.[0]}
+                alt={product.name}
+                fill
+                className="object-contain p-10"
+              />
+            </div>
+
+          
+            <div className="flex gap-4 overflow-x-auto border-t border-gray-200 px-5 py-5">
+              {product.gallery?.map((image: string) => (
+                <div
+                  key={image}
+                  className="relative h-28 w-28 min-w-[112px] rounded-xl border border-gray-200 bg-white"
+                >
+                  <Image
+                    src={image}
+                    alt={product.name}
+                    fill
+                    className="rounded-xl object-cover p-2"
+                  />
+                </div>
+              ))}
+            </div>
+
+          </div> */}
+        </div>
+      </section>
+
+      {/* content */}
+      <section className="mx-auto max-w-[1440px] px-5 py-16 lg:px-10">
+        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+          {/* features */}
+          <div className="rounded-3xl border border-gray-200 bg-white p-8">
+            <h3 className="text-2xl font-bold text-[#0A2A66]">Key Features</h3>
+
+            <div className="mt-8 space-y-5">
+              {product.features?.map((feature: string) => (
+                <div key={feature} className="flex items-start gap-4">
+                  <CheckCircle2 className="mt-1 h-5 w-5 text-[#0145a7]" />
+
+                  <p className="leading-7 text-gray-700">{feature}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* applications */}
+          <div className="rounded-3xl border border-gray-200 bg-white p-8">
+            <h3 className="text-2xl font-bold text-[#0A2A66]">Applications</h3>
+
+            <div className="mt-8 space-y-5">
+              {product.applications?.map((item: string) => (
+                <div
+                  key={item}
+                  className="flex items-center gap-4 text-gray-700"
+                >
+                  <Factory className="h-5 w-5 text-[#0145a7]" />
+
+                  <p>{item}</p>
+                </div>
+              ))}
+            </div>
+          </div>
+
+          {/* description */}
+          <div className="rounded-3xl border border-gray-200 bg-white p-8">
+            <h3 className="text-2xl font-bold text-[#0A2A66]">Description</h3>
+
+            <p className="mt-8 leading-8 text-gray-700">
+              {/* {product.description} */}
+            </p>
+          </div>
+        </div>
+
+        {/* downloads */}
+        <div className="mt-12 rounded-3xl border border-gray-200 bg-white p-8">
+          <h3 className="text-2xl font-bold text-[#0A2A66]">File Downloads</h3>
+
+          <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
+            {product.downloads?.map(
+              (
+                file: {
+                  title: string;
+                  file: string;
+                },
+                index: number,
+              ) => (
+                <a
+                  key={index}
+                  href={file.file}
+                  className="flex items-center justify-between rounded-2xl border border-gray-200 p-5 transition hover:bg-gray-50"
+                >
+                  <div>
+                    <p className="font-semibold text-[#0A2A66]">{file.title}</p>
+
+                    <p className="mt-1 text-sm text-gray-500">PDF Download</p>
+                  </div>
+
+                  <Download className="h-5 w-5 text-[#0A2A66]" />
+                </a>
+              ),
+            )}
+          </div>
+        </div>
+
+        {/* related */}
+        <div className="mt-12">
+          <h3 className="text-3xl font-black text-[#0A2A66]">
+            Related Products
+          </h3>
+
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
+            {productList.slice(0, 3).map((item) => (
+              <Link
+                key={item.slug}
+                href={`/products/${item.slug}`}
+                className="group overflow-hidden rounded-3xl border border-gray-200 bg-white"
+              >
+                <div className="relative aspect-[1.4/1] overflow-hidden">
+                  <Image
+                    src={item.thumbnail}
+                    alt={item.name}
+                    fill
+                    className="object-cover transition duration-500 group-hover:scale-105"
+                  />
+                </div>
+
+                <div className="p-6">
+                  <h4 className="text-2xl font-bold text-[#0A2A66]">
+                    {item.name}
+                  </h4>
+
+                  <p className="mt-3 leading-7 text-gray-600">
+                    {item.subtitle}
+                  </p>
+                </div>
+              </Link>
+            ))}
+          </div>
+        </div>
+      </section>
+    </main>
+  );
+}
