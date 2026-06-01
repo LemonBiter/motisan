@@ -34,7 +34,7 @@ export default function ProductGallery({
         </div>
       </div>
       {/* Thumbnails */}
-      <div className="flex gap-4 overflow-x-auto border-t border-gray-200 px-5 py-5">
+      <div className="flex justify-center gap-4 overflow-x-auto border-t border-gray-200 px-5 py-5">
         {images.map((image, index) => (
           <button
             key={image}

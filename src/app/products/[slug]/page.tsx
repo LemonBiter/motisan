@@ -15,6 +15,30 @@ import {
 import productList from "@/data/products/json/index.json";
 import ProductGallery from "@/components/product/ProductGallery";
 
+export async function generateMetadata({
+  params,
+}: {
+  params: Promise<{ slug: string }>;
+}) {
+  const { slug } = await params;
+
+  try {
+    const product = await import(`@/data/products/json/${slug}.json`).then(
+      (mod) => mod.default,
+    );
+
+    return {
+      title: product.seo?.title || product.name,
+      description: product.seo?.description || product.description,
+      keywords: product.seo?.keywords || [],
+    };
+  } catch (error) {
+    return {
+      title: "Product Not Found",
+    };
+  }
+}
+
 export default async function ProductPage({
   params,
 }: {
@@ -44,7 +68,7 @@ export default async function ProductPage({
   }
 
   return (
-    <main className="bg-[#f7f7f7]">
+    <main className="bg-white">
       {/* breadcrumb */}
       <section className="border-b border-gray-200 bg-white">
         <div className="mx-auto max-w-[1440px] px-5 py-5 lg:px-10">
@@ -67,7 +91,8 @@ export default async function ProductPage({
       </section>
 
       {/* hero */}
-      <section className="bg-white">
+      <section className="bg-white border-b border-gray-200">
+        {/* lg:grid-cols-[0.9fr_1.1fr] */}
         <div className="mx-auto grid max-w-[1440px] grid-cols-1 lg:grid-cols-2">
           {/* left */}
           <div className="flex flex-col justify-start px-5 py-12 lg:px-10 lg:py-20 bg-[#fafafa]">
@@ -84,7 +109,7 @@ export default async function ProductPage({
             </h2>
 
             <p className="mt-6 max-w-[560px] text-base leading-8 text-gray-600">
-              {product.description}
+              {product.shortDescription}
             </p>
 
             {/* buttons */}
@@ -136,85 +161,55 @@ export default async function ProductPage({
           </div>
 
           <ProductGallery images={product.gallery} productName={product.name} />
-          {/* <div className="border-l border-gray-200 bg-[#fafafa]">
-            <div className="relative aspect-square">
-              <Image
-                src={product.gallery?.[0]}
-                alt={product.name}
-                fill
-                className="object-contain p-10"
-              />
-            </div>
-
-          
-            <div className="flex gap-4 overflow-x-auto border-t border-gray-200 px-5 py-5">
-              {product.gallery?.map((image: string) => (
-                <div
-                  key={image}
-                  className="relative h-28 w-28 min-w-[112px] rounded-xl border border-gray-200 bg-white"
-                >
-                  <Image
-                    src={image}
-                    alt={product.name}
-                    fill
-                    className="rounded-xl object-cover p-2"
-                  />
-                </div>
-              ))}
-            </div>
-
-          </div> */}
         </div>
       </section>
 
       {/* content */}
-      <section className="mx-auto max-w-[1440px] px-5 py-16 lg:px-10">
-        <div className="grid grid-cols-1 gap-10 lg:grid-cols-3">
+      <section className="mx-auto max-w-[1440px] grid grid-cols-1 lg:grid-cols-[1fr_500px] gap-[150px] px-5 py-16 lg:px-20 bg-white">
+        <div>
           {/* features */}
-          <div className="rounded-3xl border border-gray-200 bg-white p-8">
+          <div className="rounded-3xl border border-gray-200 bg-[#f8f9fa] p-8">
             <h3 className="text-2xl font-bold text-[#0A2A66]">Key Features</h3>
 
             <div className="mt-8 space-y-5">
-              {product.features?.map((feature: string) => (
-                <div key={feature} className="flex items-start gap-4">
-                  <CheckCircle2 className="mt-1 h-5 w-5 text-[#0145a7]" />
-
-                  <p className="leading-7 text-gray-700">{feature}</p>
-                </div>
-              ))}
+              {product.features?.map(
+                (feature: { content: string; explain: string }) => (
+                  // <div key={feature.content} className="flex items-start gap-4">
+                  <div key={feature.content} className="">
+                    <CheckCircle2 className="mt-1 h-5 w-5 text-[#0145a7]" />
+                    <div className="w-[85%]">
+                      <h1 className="leading-7 font-medium text-[#0A2A66]">
+                        {feature.content}
+                      </h1>
+                      <span className="leading-7 text-sm text-gray-700">
+                        {feature.explain}
+                      </span>
+                    </div>
+                  </div>
+                ),
+              )}
             </div>
           </div>
-
-          {/* applications */}
-          <div className="rounded-3xl border border-gray-200 bg-white p-8">
-            <h3 className="text-2xl font-bold text-[#0A2A66]">Applications</h3>
-
-            <div className="mt-8 space-y-5">
-              {product.applications?.map((item: string) => (
-                <div
-                  key={item}
-                  className="flex items-center gap-4 text-gray-700"
-                >
-                  <Factory className="h-5 w-5 text-[#0145a7]" />
-
-                  <p>{item}</p>
-                </div>
-              ))}
-            </div>
-          </div>
-
-          {/* description */}
-          <div className="rounded-3xl border border-gray-200 bg-white p-8">
+          <div>
             <h3 className="text-2xl font-bold text-[#0A2A66]">Description</h3>
 
             <p className="mt-8 leading-8 text-gray-700">
-              {/* {product.description} */}
+              {product.longDescription}
             </p>
           </div>
-        </div>
+          <div>
+            <h3 className="text-2xl pt-8 font-bold text-[#0A2A66]">
+              Why Choose Motisan Steel Clad door?
+            </h3>
 
+            <p className="mt-8 leading-8 text-gray-700">{product.whyChoose}</p>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-[1440px] px-5 pb-16 lg:px-10">
         {/* downloads */}
-        <div className="mt-12 rounded-3xl border border-gray-200 bg-white p-8">
+        <div className="mt-12 rounded-3xl border border-gray-200 bg-[#fafafa] p-8">
           <h3 className="text-2xl font-bold text-[#0A2A66]">File Downloads</h3>
 
           <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -229,7 +224,7 @@ export default async function ProductPage({
                 <a
                   key={index}
                   href={file.file}
-                  className="flex items-center justify-between rounded-2xl border border-gray-200 p-5 transition hover:bg-gray-50"
+                  className="flex items-center justify-between rounded-2xl border border-gray-200 p-5 transition hover:bg-white"
                 >
                   <div>
                     <p className="font-semibold text-[#0A2A66]">{file.title}</p>
