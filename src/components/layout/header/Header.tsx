@@ -370,7 +370,7 @@ export default function Header() {
               <ChevronUp className="ml-2 h-4 w-4 rotate-180 transition duration-300 group-hover:rotate-0" />
             </div>
 
-
+{/* test updates */}
             <div className="invisible opacity-0 absolute left-1/2 top-[128px] z-50 w-screen max-w-[1440px]  -translate-x-1/2 overflow-hidden rounded-[4px] border border-gray-200 bg-white  shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition-all duration-300">
             {/* <div className="invisible opacity-0 absolute left-1/2 top-[128px] z-50 w-screen max-w-[1440px]  -translate-x-1/2 overflow-hidden rounded-[4px] border border-gray-200 bg-white  shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition-all duration-300 group-hover:visible group-hover:opacity-100"> */}
               <div className="grid grid-cols-[350px_1fr_1fr_1fr_250px]">
