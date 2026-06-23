@@ -1,0 +1,159 @@
+{
+  "slug": "insulated-sectional-door",
+  "name": "Insulated Sectional Door",
+  "category": "Doors",
+  "type": "Industries",
+  "subtitle": "Thermally efficient sectional door solution for industrial and commercial applications.",
+  "thumbnail": "/images/products/insulated-sectional-door/door-1.jpg",
+
+  "hero": {
+    "eyebrow": "DOORS, SECTIONAL DOOR",
+    "title": "Insulated Sectional Door",
+    "description": "Engineered and designed in Australia, the Motisan Insulated Sectional Door delivers thermal efficiency, durability and reliable operation. Suitable for residential, commercial and industrial environments."
+  },
+
+  "shortDescription": "Thermally insulated sectional door system engineered for energy efficiency, smooth operation and long-term durability.",
+
+  "longDescription": "Engineered and designed in Australia, the Motisan Insulated Sectional Door is the ultimate solution for thermal efficiency, durability and style. Perfect for residential, commercial and industrial applications, it is built to meet the highest standards. Thermal insulated panels provide superior insulation performance, while galvanized steel construction and UV-resistant powder coating ensure long-lasting durability. Precision-engineered components deliver smooth and quiet operation, with multiple panel, window and colour options available to suit project requirements.",
+  "gallery": [
+     {
+      "title": "insulatedSectionalDoor-1",
+      "url":  "/images/products/insulatedSectionalDoor/6.jpeg",
+      "type": "image"
+    },
+    {
+      "title": "insulatedSectionalDoor-2",
+      "url":  "/images/products/insulatedSectionalDoor/2.jpg",
+      "type": "image"
+    },
+    {
+      "title": "insulatedSectionalDoor-3",
+      "url":  "/images/products/insulatedSectionalDoor/3.jpg",
+      "type": "image"
+    },
+    {
+      "title": "insulatedSectionalDoor-4",
+      "url":  "/images/products/insulatedSectionalDoor/4.jpg",
+      "type": "image"
+    },
+    {
+      "title": "insulatedSectionalDoor-5",
+      "url":  "/images/products/insulatedSectionalDoor/5.jpeg",
+      "type": "image"
+    },
+    {
+      "title": "insulatedSectionalDoor-6",
+      "url":  "/images/products/insulatedSectionalDoor/1.jpg",
+      "type": "image"
+    },
+    {
+      "title": "insulatedSectionalDoor-7",
+      "url":  "/images/products/insulatedSectionalDoor/7.mov",
+      "type": "video",
+      "cover":"/images/products/insulatedSectionalDoor/cover-7.png"
+    }
+  ],
+  "features": [
+    {
+      "content": "Thermal Efficiency",
+      "explain": "Thermal insulated panels ensure superior insulation performance and energy savings."
+    },
+    {
+      "content": "Durability",
+      "explain": "Galvanized steel construction with UV-resistant powder coating for long-lasting performance."
+    },
+    {
+      "content": "Smooth Operation",
+      "explain": "Precision-engineered system provides quiet and reliable operation."
+    },
+    {
+      "content": "Aesthetic Appeal",
+      "explain": "Available in a range of colours and window configurations."
+    },
+    {
+      "content": "Safety",
+      "explain": "Complies with EN13241-1 and CE standards with finger-safe design and spring break safety device."
+    }
+  ],
+
+  "specifications": {
+    "Panel Construction": "High-density (≥48kg/m³) PU insulated panels",
+    "Steel Material": "BlueScope pre-coated galvanised steel",
+    "Surface Finish": "UV-resistant powder coating",
+    "Safety Standard": "EN13241-1, CE",
+    "Warranty": "10 Years",
+    "Operation": "Smooth and quiet precision-engineered system",
+    "Motor": "German Marantec motor",
+    "Motor Protection": "IP65 Waterproof"
+  },
+
+  "panelOptions": [
+    "EN Finger-Safe Panel",
+    "40mm Thermal Break Panel",
+    "43mm Thermal Break Panel",
+    "50mm Thermal Break Panel",
+    "60mm Thermal Break Panel",
+    "70mm Thermal Break Panel",
+    "80mm Thermal Break Panel",
+    "43+60 Wind Brace Panel",
+    "43+95 Wind Brace Panel",
+    "51+120 Wind Brace Panel"
+  ],
+
+  "colourOptions": [
+    "White RAL9016",
+    "RAL9006 Silver Grey",
+    "Golden Oak",
+    "Black Walnut",
+    "Brown RAL8017",
+    "RAL7016 Coal Ash"
+  ],
+
+  "windowOptions": [
+    "Type A1",
+    "Type A2",
+    "Type A3",
+    "Type A4",
+    "Type A5",
+    "Type A6",
+    "Type A7",
+    "Type B1",
+    "Type B2",
+    "Type B3",
+    "Type B4",
+    "Type C1",
+    "Type C2"
+  ],
+
+  "applications": [
+    "Cold Storage Facilities",
+    "Warehouses",
+    "Distribution Centres",
+    "Industrial Buildings",
+    "Commercial Buildings",
+    "Food Processing Facilities",
+    "Manufacturing Plants",
+    "Logistics Centres"
+  ],
+
+  "whyChoose": "Motisan combines Australian engineering with proven industrial performance. Featuring high-density insulated panels, BlueScope galvanised steel construction, German Marantec motors and compliance with international safety standards, the Insulated Sectional Door provides a reliable, energy-efficient and durable access solution for demanding environments.",
+  "downloads": [
+    {
+      "title": "Motisan Industrial Sectional Doors Brochure",
+      "file": "/downloads/motisan-industrial-sectional-doors-brochure.pdf"
+    }
+  ],
+
+  "seo": {
+    "title": "Insulated Sectional Door | Motisan",
+    "description": "Australian engineered insulated sectional doors featuring thermal insulated panels, BlueScope galvanised steel construction, Marantec motors and EN13241-1 compliance.",
+    "keywords": [
+      "Insulated Sectional Door",
+      "Industrial Sectional Door",
+      "Warehouse Door",
+      "Commercial Sectional Door",
+      "Thermal Insulated Door",
+      "Motisan"
+    ]
+  }
+}

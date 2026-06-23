@@ -3,17 +3,82 @@
     "slug": "unidoor",
     "name": "UniDoor",
     "category": "Doors",
-    "thumbnail": "/images/products/unidoor/unidoor-1.jpg",
+
+    "type": "MetalCladDoor",
+
+    "thumbnail": "/images/products/unidoor/LightOakLaminate.jpg",
     "subtitle": "Pre-hung insulated panel door"
   },
-
+{
+    "slug": "insulated-sectional-door",
+    "name": "Insulated Sectional Door",
+    "type": "Industries",
+    "category": "Doors",
+    "thumbnail": "/images/products/insulatedSectionalDoor/6.jpeg",
+    "subtitle": "Efficient solution for industrial and commercial applications"
+  },
   {
-    "slug": "sectional-door",
+    "slug": "metal-protective-film",
+    "name": "Metal Protective Film",
+    "category": "Protective Materials",
+    "type": "PanelAccessory",
 
-    "name": "Sectional Door",
+    "subtitle": "The best protective film for sandwich panels.",
+
+    "thumbnail": "/images/products/metalProtectiveFilm/metalProtectiveFilm.png"
+  },
+  {
+    "slug": "donga-door-outswing",
+
+    "name": "Donga Door (Outswing)",
+    "type": "MetalCladDoor",
+    "category": "Doors",
+    "thumbnail": "/images/products/dongaDoorOutswing/dongaDoorOutswing-3.jpg",
+    "subtitle": "Cyclone rated outswing steel door"
+  },
+  {
+    "slug": "donga-door-inswing",
+
+    "type": "MetalCladDoor",
+
+    "name": "Donga Door (Inswing)",
 
     "category": "Doors",
+    "thumbnail": "/images/products/dongaDoorInswing/dongaDoorInswing-1.jpg",
+    "subtitle": "Cyclone rated inswing steel door "
+  },
+  {
+    "slug": "unidoor-bal29",
+    "name": "UniDoor BAL29",
 
-    "subtitle": "Industrial insulated sectional doors"
+    "type": "MetalCladDoor",
+
+    "category": "Doors",
+    "thumbnail": "/images/products/unidoor/ArmourGrey.jpg",
+    "subtitle": "Pre-hung insulated steel doorset designed for Australian bushfire-prone construction"
+  },
+  {
+    "slug": "ambient-rapid-door",
+    "name": "Ambient Rapid Door",
+
+    "type": "HighSpeedDoor",
+    "category": "Doors",
+    "subtitle": ""
+  },
+  {
+    "slug": "coolroom-rapid-door",
+    "name": "Coolroom Rapid Door",
+
+    "type": "HighSpeedDoor",
+    "category": "Doors",
+    "subtitle": ""
+  },
+  {
+    "slug": "freezer-rapid-door",
+    "name": "Freezer Rapid Door",
+
+    "type": "HighSpeedDoor",
+    "category": "Doors",
+    "subtitle": ""
   }
 ]

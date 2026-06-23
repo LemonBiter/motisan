@@ -4,24 +4,29 @@
   "category": "Doors",
   "subtitle": "Pre-hung steel door for insulated panel systems.",
   "shortDescription": "Australian engineered and pre-hung for fast, easy installation. DDA compatible, airtight, durable and built for performance in cleanrooms, insulated panel rooms and steel frame buildings.",
-  "longDescription":"Ready for Installation – The Versatile Steel Door for Insulated Panel Rooms, Cleanrooms, and Steel Frame Buildings. DDA Compatible.Engineered in Australia, the Motisan Steel Clad door is designed with a pre-hung construction that makes installation straightforward and hassle-free. Whether you’re outfitting a cleanroom, insulated panel room, or steel frame building, our door delivers exceptional performance, durability, and ease of installation—all while ensuring DDA compatibility for accessible building design.",
-  "heroImage": "/images/products/unidoor/hero.png",
-  "features": [{
-    "content": "Pre-hung design for quick and easy installation",
-    "explain": "Our door comes pre-hung on a box section frame, ensuring a smooth, integrated installation process. With this ready-for-installation design, you enjoy a quicker setup and a seamless finish, minimizing downtime on your project."
-  },{
-    "content": "Robust Steel & Metal Clad Construction",
-    "explain": "Built as a high-performance steel clad door, the door is crafted to serve as both a steel clad and steel clad solution, delivering exceptional durability and security for any environment."
-  },{
-    "content": "Airtightness & Sealing",
-    "explain": "Featuring a rebate door leaf design with premium rubber-plastic seals and an automatic drop-down bottom seal, our door maintains excellent airtight integrity—ideal for controlled environments."
-  },{
-    "content": "DDA compliant for inclusive buildings",
-    "explain": "Designed with DDA compatibility in mind, the Motisan Steel Clad door ensures your building meets accessibility requirements and provides an inclusive environment for all users."
-  },{
-    "content": "UV-Resistant Powder Coating & Modern Aesthetics",
-    "explain": "Enjoy a long-lasting, low-maintenance finish with UV-resistant powder coating that resists fading. The sleek design is complemented by a double-layer tempered glass view window for added style and functionality."
-  }
+  "longDescription": "Ready for Installation – The Versatile Steel Door for Insulated Panel Rooms, Cleanrooms, and Steel Frame Buildings. DDA Compatible.Engineered in Australia, the Motisan Steel Clad door is designed with a pre-hung construction that makes installation straightforward and hassle-free. Whether you’re outfitting a cleanroom, insulated panel room, or steel frame building, our door delivers exceptional performance, durability, and ease of installation—all while ensuring DDA compatibility for accessible building design.",
+  "heroImage": "/images/products/unidoor/ArmourGrey.png",
+  "features": [
+    {
+      "content": "Pre-hung design for quick and easy installation",
+      "explain": "Our door comes pre-hung on a box section frame, ensuring a smooth, integrated installation process. With this ready-for-installation design, you enjoy a quicker setup and a seamless finish, minimizing downtime on your project."
+    },
+    {
+      "content": "Robust Steel & Metal Clad Construction",
+      "explain": "Built as a high-performance steel clad door, the door is crafted to serve as both a steel clad and steel clad solution, delivering exceptional durability and security for any environment."
+    },
+    {
+      "content": "Airtightness & Sealing",
+      "explain": "Featuring a rebate door leaf design with premium rubber-plastic seals and an automatic drop-down bottom seal, our door maintains excellent airtight integrity—ideal for controlled environments."
+    },
+    {
+      "content": "DDA compliant for inclusive buildings",
+      "explain": "Designed with DDA compatibility in mind, the Motisan Steel Clad door ensures your building meets accessibility requirements and provides an inclusive environment for all users."
+    },
+    {
+      "content": "UV-Resistant Powder Coating & Modern Aesthetics",
+      "explain": "Enjoy a long-lasting, low-maintenance finish with UV-resistant powder coating that resists fading. The sleek design is complemented by a double-layer tempered glass view window for added style and functionality."
+    }
   ],
 
   "applications": [
@@ -34,17 +39,27 @@
   ],
 
   "specifications": {
-    "structuralMaterial": "Galvanised steel",
-    "steelThickness": {
-      "doorLeaf": "0.8mm",
-      "doorFrame": "1.5mm"
-    },
-    "finish": "UV-Resistant Powder Coating",
-    "infillInsulation": {
-      "material": "Fire-resistant Rockwool (Mineral Wool)",
-      "rValue": "1.40 m²K/w"
-    },
-    "hinges": "3 Stainless Steel Hinges"
+    "Structural Material": "Galvanised steel",
+
+    "Steel Thickness": "Door leaf 0.8mm / Door frame 1.5mm",
+
+    "Finish": "UV-Resistant Powder Coating",
+
+    "Infill Insulation": "Fire-resistant Rockwool (Mineral Wool), R-value 1.40 m²K/W",
+
+    "Hinge": "3 Stainless Steel Hinges",
+
+    "Size": "820×2060×50, 920×2060×50, 1020×2060×50",
+
+    "Clear Opening": "790×2045, 890×2045, 990×2045",
+
+    "Customization": "Custom sizes available on request",
+
+    "View Window": "Double-glazing tempered glass",
+
+    "Kick Plate": "Optional stainless steel kick plate",
+
+    "Powder Coating": "Available in various colours"
   },
 
   "sizes": [
@@ -69,52 +84,71 @@
     "Custom sizes available"
   ],
 
-  "locks": [
-    "Lever",
-    "DDA Compliant",
-    "Mortice"
-  ],
+  "locks": ["Lever", "DDA Compliant", "Mortice"],
 
   "colours": [
-    {
-      "name": "PC Monument",
-      "image": "/images/products/unidoor/colours/monument.png"
-    },
-    {
-      "name": "PC Surfmist",
-      "image": "/images/products/unidoor/colours/surfmist.png"
-    },
-    {
-      "name": "PC Windspray",
-      "image": "/images/products/unidoor/colours/windspray.png"
-    },
-    {
-      "name": "PC Basalt",
-      "image": "/images/products/unidoor/colours/basalt.png"
-    },
-    {
-      "name": "Light Oak",
-      "image": "/images/products/unidoor/colours/light-oak.png"
-    }
+    "Light Oak Laminate",
+    "Armour Grey",
+    "Armour Grey with Window",
+    "LightOak Laminate with Window",
+    "Off White",
+    "Off White with Window",
+    "Powder Coat Basalt",
+    "Powder Coat Monument"
   ],
 
   "downloads": [
     {
-      "title": "UniDoor Datasheet",
-      "file": "/downloads/unidoor-datasheet.pdf"
+      "title": "Motisan UniDoor SD03 brochure_V2 Nov 25",
+      "file": "/downloads/Motisan-UniDoor-brochure.pdf"
     },
     {
-      "title": "Installation Guide",
-      "file": "/downloads/unidoor-installation.pdf"
+      "title": "3 Side Frame Internal Door Installation Instruction",
+      "file": "/downloads/3-Side-Frame-Internal-Door-Installation-Instruction-D2-.pdf"
     }
   ],
 
   "gallery": [
-    "/images/products/unidoor/unidoor-1.jpg",
-    "/images/products/unidoor/unidoor-2.jpg",
-    "/images/products/unidoor/unidoor-3.jpg",
-    "/images/products/unidoor/unidoor-4.jpg",
-    "/images/products/unidoor/unidoor-5.jpg"
+    {
+      "title": "Light Oak Laminate Finish",
+      "url": "/images/products/unidoor/LightOakLaminate.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Armour Grey",
+      "url": "/images/products/unidoor/ArmourGrey.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Armour Grey with Window",
+      "url": "/images/products/unidoor/ArmourGreywithWindow.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Light Oak Laminate with Window ",
+      "url": "/images/products/unidoor/LightOakLaminatewithWindow.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Off White",
+      "url": "/images/products/unidoor/OffWhite.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Off White with Window",
+      "url": "/images/products/unidoor/OffWhitewithWindow.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Powder Coat Basalt",
+      "url": "/images/products/unidoor/PowderCoatBasalt2.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Powder Coat Monument",
+      "url": "/images/products/unidoor/PowderCoatMonument2.jpg",
+      "type": "image"
+    }
   ],
   "whyChoose": "At Motisan, we are committed to delivering high-quality, Australian-engineered solutions that not only meet but exceed industry standards. With features like a ready-for-installation pre-hung design and DDA compatibility, our door ensures a secure, efficient, and accessible solution for your facility. Whether upgrading a cleanroom, outfitting an insulated panel room, or constructing a new steel frame building, the Motisan Steel Clad door is built to perform and designed to last.",
 

@@ -10,10 +10,15 @@ import {
   Wrench,
   Factory,
   CheckCircle2,
+  ArrowLeft,
+  ArrowRight,
+  Clock3,
 } from "lucide-react";
 
 import productList from "@/data/products/json/index.json";
 import ProductGallery from "@/components/product/ProductGallery";
+import ProductComingSoon from "../comingSoonPage";
+import { COMING_SOON_PRODUCTS } from "@/app/const";
 
 export async function generateMetadata({
   params,
@@ -47,24 +52,17 @@ export default async function ProductPage({
   const { slug } = await params;
   let product;
   try {
+    if (COMING_SOON_PRODUCTS.includes(slug)) {
+      throw new Error("Product is coming soon");
+    }
     product = await import(`@/data/products/json/${slug}.json`).then(
       (mod) => mod.default,
     );
+    if (!product) {
+      throw new Error("Cannot find product data");
+    }
   } catch (error) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        {slug} not found
-      </div>
-    );
-  }
-  // const product = await import(`@/data/products/json/${slug}.json`).then((mod) => mod.default);
-
-  if (!product) {
-    return (
-      <div className="flex min-h-screen items-center justify-center">
-        product not found
-      </div>
-    );
+    return <ProductComingSoon />;
   }
 
   return (
@@ -91,11 +89,12 @@ export default async function ProductPage({
       </section>
 
       {/* hero */}
-      <section className="bg-white border-b border-gray-200">
+      <section className="border-b border-gray-200 bg-[#fafafa]">
         {/* lg:grid-cols-[0.9fr_1.1fr] */}
-        <div className="mx-auto grid max-w-[1440px] grid-cols-1 lg:grid-cols-2">
+        {/*  */}
+        <div className="mx-auto grid grid-cols-1 lg:grid-cols-2 max-w-[1440px] ">
           {/* left */}
-          <div className="flex flex-col justify-start px-5 py-12 lg:px-10 lg:py-20 bg-[#fafafa]">
+          <div className="flex flex-col justify-between px-5 py-12 lg:px-10 lg:py-15 ">
             <p className="mb-4 text-sm font-semibold uppercase tracking-[0.2em] text-gray-500">
               {product.category}
             </p>
@@ -118,10 +117,13 @@ export default async function ProductPage({
                 Request Quote
               </button>
 
-              <button className="flex items-center justify-center gap-2 rounded-xl border border-[#0A2A66] px-8 py-4 font-semibold text-[#0A2A66] transition hover:bg-[#0A2A66] hover:text-white">
+              <a
+                href="#downloads"
+                className="flex items-center justify-center gap-2 rounded-xl border border-[#0A2A66] px-8 py-4 font-semibold text-[#0A2A66] transition hover:bg-[#0A2A66] hover:text-white"
+              >
                 Download Datasheet
                 <Download className="h-5 w-5" />
-              </button>
+              </a>
             </div>
 
             {/* icons */}
@@ -160,42 +162,44 @@ export default async function ProductPage({
             </div>
           </div>
 
-          <ProductGallery images={product.gallery} productName={product.name} />
+          <ProductGallery
+            colors={product.colours}
+            images={product.gallery}
+            productName={product.name}
+          />
         </div>
       </section>
 
       {/* content */}
       <section className="mx-auto max-w-[1440px] grid grid-cols-1 lg:grid-cols-[1fr_500px] gap-[150px] px-5 py-16 lg:px-20 bg-white">
         <div>
-          {/* features */}
-          <div className="rounded-3xl border border-gray-200 bg-[#f8f9fa] p-8">
-            <h3 className="text-2xl font-bold text-[#0A2A66]">Key Features</h3>
-
-            <div className="mt-8 space-y-5">
-              {product.features?.map(
-                (feature: { content: string; explain: string }) => (
-                  // <div key={feature.content} className="flex items-start gap-4">
-                  <div key={feature.content} className="">
-                    <CheckCircle2 className="mt-1 h-5 w-5 text-[#0145a7]" />
-                    <div className="w-[85%]">
-                      <h1 className="leading-7 font-medium text-[#0A2A66]">
-                        {feature.content}
-                      </h1>
-                      <span className="leading-7 text-sm text-gray-700">
-                        {feature.explain}
-                      </span>
-                    </div>
-                  </div>
-                ),
-              )}
-            </div>
-          </div>
           <div>
             <h3 className="text-2xl font-bold text-[#0A2A66]">Description</h3>
 
-            <p className="mt-8 leading-8 text-gray-700">
+            <p className="my-8 leading-8 text-gray-700">
               {product.longDescription}
             </p>
+          </div>
+          <div>
+            <h3 className="text-2xl font-bold text-[#0A2A66] mb-8">
+              Specifications
+            </h3>
+            <table className="w-full border-collapse border border-gray-300">
+              <tbody>
+                {Object.entries(product?.specifications || {}).map(
+                  ([label, value]: [string, string]) => (
+                    <tr key={label}>
+                      <td className="border border-gray-300 px-4 py-2 font-medium text-gray-800">
+                        {label}
+                      </td>
+                      <td className="border border-gray-300 px-4 py-2 text-gray-700">
+                        {value}
+                      </td>
+                    </tr>
+                  ),
+                )}
+              </tbody>
+            </table>
           </div>
           <div>
             <h3 className="text-2xl pt-8 font-bold text-[#0A2A66]">
@@ -205,11 +209,36 @@ export default async function ProductPage({
             <p className="mt-8 leading-8 text-gray-700">{product.whyChoose}</p>
           </div>
         </div>
+        {/* features */}
+        <div className="rounded-3xl border border-gray-200 bg-[#f8f9fa] p-8">
+          <h3 className="text-2xl font-bold text-[#0A2A66]">Key Features</h3>
+
+          <div className="mt-8 space-y-5">
+            {product.features?.map(
+              (feature: { content: string; explain: string }) => (
+                <div key={feature.content} className="flex items-start gap-4">
+                  <CheckCircle2 className="mt-1 h-5 w-5 text-[#0145a7]" />
+                  <div className="w-[85%]">
+                    <h1 className="leading-7 font-medium text-[#0A2A66]">
+                      {feature.content}
+                    </h1>
+                    <span className="leading-7 text-sm text-gray-700">
+                      {feature.explain}
+                    </span>
+                  </div>
+                </div>
+              ),
+            )}
+          </div>
+        </div>
       </section>
 
       <section className="mx-auto max-w-[1440px] px-5 pb-16 lg:px-10">
         {/* downloads */}
-        <div className="mt-12 rounded-3xl border border-gray-200 bg-[#fafafa] p-8">
+        <div
+          id="downloads"
+          className="mt-12 scroll-mt-32 rounded-3xl border border-gray-200 bg-[#fafafa] p-8"
+        >
           <h3 className="text-2xl font-bold text-[#0A2A66]">File Downloads</h3>
 
           <div className="mt-8 grid grid-cols-1 gap-5 lg:grid-cols-2">
@@ -224,8 +253,15 @@ export default async function ProductPage({
                 <a
                   key={index}
                   href={file.file}
+                  download
                   className="flex items-center justify-between rounded-2xl border border-gray-200 p-5 transition hover:bg-white"
                 >
+                  <Image
+                    src="/logo/file-pdf-color-red-icon.webp"
+                    alt={file.title}
+                    width={40}
+                    height={40}
+                  />
                   <div>
                     <p className="font-semibold text-[#0A2A66]">{file.title}</p>
 
@@ -241,20 +277,38 @@ export default async function ProductPage({
 
         {/* related */}
         <div className="mt-12">
-          <h3 className="text-3xl font-black text-[#0A2A66]">
-            Related Products
-          </h3>
+          <div className="flex flex-col gap-3 sm:flex-row sm:items-end sm:justify-between">
+            <div>
+              <p className="text-sm font-bold uppercase tracking-[0.18em] text-[#0145a7]">
+                Explore more
+              </p>
+              <h3 className="mt-3 text-3xl font-black text-[#0A2A66]">
+                Related Products
+              </h3>
+            </div>
 
-          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-            {productList.slice(0, 3).map((item) => (
+            <Link
+              href="/products"
+              className="inline-flex items-center gap-2 font-semibold text-[#002D72] transition hover:translate-x-1"
+            >
+              View All Products
+              <ArrowRight className="h-4 w-4" />
+            </Link>
+          </div>
+
+          <div className="mt-8 grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
+            {productList
+              .filter((item) => item.slug !== product.slug)
+              .slice(0, 4)
+              .map((item) => (
               <Link
                 key={item.slug}
                 href={`/products/${item.slug}`}
-                className="group overflow-hidden rounded-3xl border border-gray-200 bg-white"
+                className="group overflow-hidden rounded-[5px] border border-gray-200 bg-white transition hover:-translate-y-1 hover:border-[#002D72] hover:shadow-[0_18px_60px_rgba(6,24,58,0.08)]"
               >
-                <div className="relative aspect-[1.4/1] overflow-hidden">
+                <div className="relative aspect-[4/3] overflow-hidden bg-[#f5f7fb]">
                   <Image
-                    src={item.thumbnail}
+                    src={item.thumbnail || "/logo/unknown-img.png"}
                     alt={item.name}
                     fill
                     className="object-cover transition duration-500 group-hover:scale-105"
@@ -262,16 +316,25 @@ export default async function ProductPage({
                 </div>
 
                 <div className="p-6">
-                  <h4 className="text-2xl font-bold text-[#0A2A66]">
+                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                    {item.category}
+                  </p>
+
+                  <h4 className="mb-3 text-xl font-semibold text-[#06183a]">
                     {item.name}
                   </h4>
 
-                  <p className="mt-3 leading-7 text-gray-600">
+                  <p className="mb-6 min-h-[48px] text-sm leading-6 text-slate-600">
                     {item.subtitle}
                   </p>
+
+                  <span className="inline-flex items-center gap-2 font-semibold text-[#002D72] transition group-hover:translate-x-1">
+                    View Details
+                    <ArrowRight className="h-4 w-4" />
+                  </span>
                 </div>
               </Link>
-            ))}
+              ))}
           </div>
         </div>
       </section>

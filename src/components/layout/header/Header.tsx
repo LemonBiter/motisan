@@ -1,8 +1,9 @@
 "use client";
 
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import {
   ChevronUp,
+  ArrowRight,
   MapPin,
   Mail,
   Phone,
@@ -17,7 +18,11 @@ import MenuItem from "@/components/product/MenuItem";
 
 export default function Header() {
   const [open, setOpen] = useState(false);
+  const [currentHover, setCurrentHover] = useState<string | null>(null);
 
+  const handleMouseEnter = () => {
+    setCurrentHover("products");
+  };
   return (
     <header className="sticky top-0 z-50 border-b border-gray-200 bg-white">
       {/* Top Contact Bar */}
@@ -60,22 +65,24 @@ export default function Header() {
       </div>
 
       <div className="mx-auto flex h-20 max-w-[1440px] items-center justify-between px-5 lg:h-[96px] lg:px-8">
-        <div>
-          {/* <h1 className="text-3xl font-black text-[#0A2A66] lg:text-5xl">
+        <Link href="/">
+          <div>
+            {/* <h1 className="text-3xl font-black text-[#0A2A66] lg:text-5xl">
             MOTISAN
           </h1> */}
-          <Image
-            src="/logo/logo.svg"
-            alt="Motisan Logo"
-            width={240}
-            height={70}
-            priority
-          />
-          <p className="hidden text-[10px] mt-2 tracking-[0.3em] text-gray-400 lg:block">
-            MODULAR ACCESS. BUILT BETTER.
-          </p>
-        </div>
-
+            <Image
+              src="/logo/logo.svg"
+              //  src="/logo/file-pdf-color-red-icon.webp"
+              alt="Motisan Logo"
+              width={240}
+              height={70}
+              priority
+            />
+            <p className="hidden text-[10px] mt-2 tracking-[0.3em] text-gray-400 lg:block">
+              MODULAR ACCESS. BUILT BETTER.
+            </p>
+          </div>
+        </Link>
         <nav className="hidden items-center gap-12 lg:flex">
           <Link href="/">
             <button
@@ -83,10 +90,14 @@ export default function Header() {
 
     border-transparent hover:border-[#0A2A66]"
             >
-              home
+              Home
             </button>
           </Link>
-          <div className="group">
+          <div
+            className="group"
+            onMouseEnter={() => handleMouseEnter()}
+            onMouseLeave={() => setCurrentHover(null)}
+          >
             <div className="flex items-center justify-center border-b-2 border-transparent pb-1 transition group-hover:border-[#0145a7]">
               <button className="font-medium text-gray-700 transition hover:text-[#0A2A66]">
                 Products
@@ -95,9 +106,10 @@ export default function Header() {
               <ChevronUp className="ml-2 h-4 w-4 rotate-180 transition duration-300 group-hover:rotate-0" />
             </div>
 
-            {/* <div className="absolute left-1/2 top-[128px] z-50 w-screen max-h-[640px] max-w-[1440px]  -translate-x-1/2 overflow-scroll rounded-[4px] border border-gray-200 bg-white  shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition-all duration-300 group-hover:visible group-hover:opacity-100"> */}
-            <div className="invisible opacity-0 absolute left-1/2 top-[128px] z-50 w-screen max-w-[1440px]  -translate-x-1/2 overflow-hidden rounded-[4px] border border-gray-200 bg-white  shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition-all duration-300 group-hover:visible group-hover:opacity-100">
-              <div className="grid grid-cols-[350px_1fr_1fr_1fr_250px]">
+            <div
+              className={`absolute left-1/2 top-[128px] max-h-[80vh] z-50 w-screen overflow-auto max-w-[1440px]  -translate-x-1/2 rounded-[4px] border border-gray-200 bg-white  shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition-all duration-300 ${currentHover === "products" ? "visible opacity-100" : "invisible opacity-0 "}`}
+            >
+              <div className="grid grid-cols-[320px_280px_280px_280px_250px_280px]">
                 {/* Left Intro */}
                 <div className="border-r border-gray-200 bg-[#fafafa] p-10 bg-[url('/img/popup-bg-2.png')] bg-contain bg-no-repeat bg-right-bottom">
                   <p className="text-sm font-semibold uppercase tracking-[0.2em] text-[#0145a7]">
@@ -124,7 +136,7 @@ export default function Header() {
                 </div>
 
                 {/* Doors */}
-
+                {/*  Metal Clad Doors */}
                 <div className="border-r border-gray-200 px-3 py-10">
                   <div className="mb-8 flex items-center gap-4">
                     <DoorOpen size={30} color="#0A2A66" />
@@ -135,102 +147,110 @@ export default function Header() {
                   </div>
 
                   <div className="space-y-5">
-                    {products.map((product) => (
-                      <MenuItem
-                        key={product.slug}
-                        slug={product.slug}
-                        name={product.name}
-                        subtitle={product.subtitle}
-                        thumbnail={product.thumbnail}
-                      />
-                    ))}
+                    {products
+                      .filter((product) => product.type === "MetalCladDoor")
+                      .map((product) => (
+                        <MenuItem
+                          key={product.slug}
+                          onClick={() => setCurrentHover(null)}
+                          slug={product.slug}
+                          name={product.name}
+                          subtitle={product.subtitle}
+                          thumbnail={product.thumbnail}
+                        />
+                      ))}
                   </div>
                 </div>
+                {/* High Speed Doors */}
                 <div className="border-r border-gray-200 px-3 py-10">
                   <div className="mb-8 flex items-center gap-4">
                     <Factory size={30} color="#0A2A66" />
 
                     <h3 className="text-[18px] font-bold text-[#0A2A66]">
-                      Industries
+                      High Speed Doors
                     </h3>
                   </div>
 
                   <div className="space-y-5">
-                    {products.map((product) => (
-                      <MenuItem
-                        key={product.slug}
-                        slug={product.slug}
-                        name={product.name}
-                        subtitle={product.subtitle}
-                        thumbnail={product.thumbnail}
-                      />
-                    ))}
+                    {products
+                      .filter((product) => product.type === "HighSpeedDoor")
+                      .map((product) => (
+                        <MenuItem
+                          key={product.slug}
+                          onClick={() => setCurrentHover(null)}
+                          slug={product.slug}
+                          name={product.name}
+                          subtitle={product.subtitle}
+                          thumbnail={
+                            product.thumbnail || "/logo/unknown-img.png"
+                          }
+                        />
+                      ))}
                   </div>
                 </div>
+                {/* Industries */}
+                <div className="px-3 py-10">
+                  <div>
+                    <div className="mb-8 flex items-center gap-4">
+                      <Factory size={30} color="#0A2A66" />
 
-                <div className="pl-3 pr-5 py-10">
-                  <div className="mb-8 flex items-center gap-4">
-                    <ShieldPlus size={30} color="#0A2A66" />
+                      <h3 className="text-[18px] font-bold text-[#0A2A66]">
+                        Industries
+                      </h3>
+                    </div>
 
-                    <h3 className="text-[18px] font-bold text-[#0A2A66]">
-                      Panel Accessories
-                    </h3>
+                    <div className="space-y-5">
+                      {products
+                        .filter((product) => product.type === "Industries")
+                        .map((product) => (
+                          <MenuItem
+                            key={product.slug}
+                            onClick={() => setCurrentHover(null)}
+                            slug={product.slug}
+                            name={product.name}
+                            subtitle={product.subtitle}
+                            thumbnail={
+                              product.thumbnail || "/logo/unknown-img.png"
+                            }
+                          />
+                        ))}
+                    </div>
                   </div>
+                  {/* Panel Accessories */}
+                  <div className="pr-5 py-10">
+                    <div className="mb-8 flex items-center gap-4">
+                      <ShieldPlus size={30} color="#0A2A66" />
 
-                  <div className="space-y-5">
-                    {products.map((product, index) => (
-                      <MenuItem
-                        key={product.slug}
-                        slug={product.slug}
-                        name={product.name}
-                        subtitle={product.subtitle}
-                        thumbnail={product.thumbnail}
-                        lastOne={index === products.length - 1}
-                      />
-                    ))}
+                      <h3 className="text-[16px] font-bold text-[#0A2A66]">
+                        Panel Protection & Accessories
+                      </h3>
+                    </div>
+
+                    <div className="space-y-5">
+                      {products
+                        .filter((product) => product.type === "PanelAccessory")
+                        .map((product) => (
+                          <MenuItem
+                            key={product.slug}
+                            onClick={() => setCurrentHover(null)}
+                            slug={product.slug}
+                            name={product.name}
+                            subtitle={product.subtitle}
+                            thumbnail={
+                              product.thumbnail || "/logo/unknown-img.png"
+                            }
+                          />
+                        ))}
+                    </div>
+                    <Link href="/products">
+                      <button className="mt-4 ml-4 font-medium text-[#002D72] hover:underline">
+                        <h5 className="flex justify-center items-center text-[14px] font-bold text-[#0A2A66]">
+                          View All <ArrowRight className="ml-2 h-4 w-4" />
+                        </h5>
+                      </button>
+                    </Link>
                   </div>
                 </div>
-                {/* Windows */}
-
-                {/* Hardware */}
-                {/* <div className=" p-10">
-                  <div className="mb-8 flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#0145a7]/20 bg-[#0145a7]/5">
-                      <span className="text-xl text-[#0145a7]">🛠️</span>
-                    </div>
-
-                    <h3 className="text-[28px] font-bold text-[#0A2A66]">
-                      Hardware
-                    </h3>
-                  </div>
-
-                  <div className="space-y-4 text-[16px] text-gray-700">
-                    <div className="flex items-center justify-between rounded-xl px-3 py-3 transition hover:bg-gray-50">
-                      <span>Hinges</span>
-                      <span>›</span>
-                    </div>
-
-                    <div className="flex items-center justify-between rounded-xl px-3 py-3 transition hover:bg-gray-50">
-                      <span>Locks</span>
-                      <span>›</span>
-                    </div>
-
-                    <div className="flex items-center justify-between rounded-xl px-3 py-3 transition hover:bg-gray-50">
-                      <span>Handles</span>
-                      <span>›</span>
-                    </div>
-
-                    <div className="flex items-center justify-between rounded-xl px-3 py-3 transition hover:bg-gray-50">
-                      <span>Door Hardware</span>
-                      <span>›</span>
-                    </div>
-
-                    <div className="flex items-center justify-between rounded-xl px-3 py-3 transition hover:bg-gray-50">
-                      <span>Panel Accessories</span>
-                      <span>›</span>
-                    </div>
-                  </div>
-                </div> */}
 
                 {/* Right CTA */}
                 <div className="pr-2 py-5">
@@ -350,8 +370,9 @@ export default function Header() {
               <ChevronUp className="ml-2 h-4 w-4 rotate-180 transition duration-300 group-hover:rotate-0" />
             </div>
 
-            {/* <div className="absolute left-1/2 top-[128px] z-50 w-screen max-h-[640px] max-w-[1440px]  -translate-x-1/2 overflow-scroll rounded-[4px] border border-gray-200 bg-white  shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition-all duration-300 group-hover:visible group-hover:opacity-100"> */}
-            <div className="invisible opacity-0 absolute left-1/2 top-[128px] z-50 w-screen max-w-[1440px]  -translate-x-1/2 overflow-hidden rounded-[4px] border border-gray-200 bg-white  shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition-all duration-300 group-hover:visible group-hover:opacity-100">
+
+            <div className="invisible opacity-0 absolute left-1/2 top-[128px] z-50 w-screen max-w-[1440px]  -translate-x-1/2 overflow-hidden rounded-[4px] border border-gray-200 bg-white  shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition-all duration-300">
+            {/* <div className="invisible opacity-0 absolute left-1/2 top-[128px] z-50 w-screen max-w-[1440px]  -translate-x-1/2 overflow-hidden rounded-[4px] border border-gray-200 bg-white  shadow-[0_25px_80px_rgba(0,0,0,0.12)] transition-all duration-300 group-hover:visible group-hover:opacity-100"> */}
               <div className="grid grid-cols-[350px_1fr_1fr_1fr_250px]">
                 {/* Left Intro */}
                 <div className="border-r border-gray-200 bg-[#fafafa] p-10 bg-[url('/img/popup-bg-2.png')] bg-contain bg-no-repeat bg-right-bottom">
@@ -401,8 +422,9 @@ export default function Header() {
                     ))}
                   </div>
                 </div>
+
                 <div className="border-r border-gray-200 px-3 py-10">
-                  <div className="mb-8 flex items-center gap-4">
+                  <div className="mt-8 flex items-center gap-4">
                     <Factory size={30} color="#0A2A66" />
 
                     <h3 className="text-[18px] font-bold text-[#0A2A66]">
@@ -427,8 +449,8 @@ export default function Header() {
                   <div className="mb-8 flex items-center gap-4">
                     <ShieldPlus size={30} color="#0A2A66" />
 
-                    <h3 className="text-[18px] font-bold text-[#0A2A66]">
-                      Panel Accessories
+                    <h3 className="text-[16px] font-bold text-[#0A2A66]">
+                      Panel Protection & Accessories
                     </h3>
                   </div>
 
@@ -445,47 +467,6 @@ export default function Header() {
                     ))}
                   </div>
                 </div>
-                {/* Windows */}
-
-                {/* Hardware */}
-                {/* <div className=" p-10">
-                  <div className="mb-8 flex items-center gap-4">
-                    <div className="flex h-12 w-12 items-center justify-center rounded-xl border border-[#0145a7]/20 bg-[#0145a7]/5">
-                      <span className="text-xl text-[#0145a7]">🛠️</span>
-                    </div>
-
-                    <h3 className="text-[28px] font-bold text-[#0A2A66]">
-                      Hardware
-                    </h3>
-                  </div>
-
-                  <div className="space-y-4 text-[16px] text-gray-700">
-                    <div className="flex items-center justify-between rounded-xl px-3 py-3 transition hover:bg-gray-50">
-                      <span>Hinges</span>
-                      <span>›</span>
-                    </div>
-
-                    <div className="flex items-center justify-between rounded-xl px-3 py-3 transition hover:bg-gray-50">
-                      <span>Locks</span>
-                      <span>›</span>
-                    </div>
-
-                    <div className="flex items-center justify-between rounded-xl px-3 py-3 transition hover:bg-gray-50">
-                      <span>Handles</span>
-                      <span>›</span>
-                    </div>
-
-                    <div className="flex items-center justify-between rounded-xl px-3 py-3 transition hover:bg-gray-50">
-                      <span>Door Hardware</span>
-                      <span>›</span>
-                    </div>
-
-                    <div className="flex items-center justify-between rounded-xl px-3 py-3 transition hover:bg-gray-50">
-                      <span>Panel Accessories</span>
-                      <span>›</span>
-                    </div>
-                  </div>
-                </div> */}
 
                 {/* Right CTA */}
                 <div className="pr-2 py-5">
@@ -494,7 +475,7 @@ export default function Header() {
                       Need Help Finding
                     </p>
 
-                    <h3 className="mt-5 text-[24px] font-[400] leading-[1.1] tracking-tight text-[#000000]">
+                    <h3 className="mt-5 text-[22px] font-[400] leading-[1.1] tracking-tight text-[#000000]">
                       The right solution for your project?
                     </h3>
 
@@ -596,22 +577,22 @@ export default function Header() {
               </div>
             </div>
           </div>
-          <button className="font-medium text-gray-700 transition hover:text-[#0A2A66] border-b-2 border-transparent hover:border-[#0A2A66]">
+          <Link href="/services" className="font-medium text-gray-700 transition hover:text-[#0A2A66] border-b-2 border-transparent hover:border-[#0A2A66]">
             Services
-          </button>
+          </Link>
 
-          <button className="font-medium text-gray-700 transition hover:text-[#0A2A66] border-b-2 border-transparent hover:border-[#0A2A66]">
-            About
-          </button>
-          <button className="font-medium text-gray-700 transition hover:text-[#0A2A66] border-b-2 border-transparent hover:border-[#0A2A66]">
+          <Link href="/about-us" className="font-medium text-gray-700 transition hover:text-[#0A2A66] border-b-2 border-transparent hover:border-[#0A2A66]">
+            About Us
+          </Link>
+          <Link href="/contact" className="font-medium text-gray-700 transition hover:text-[#0A2A66] border-b-2 border-transparent hover:border-[#0A2A66]">
             Contact
-          </button>
+          </Link>
         </nav>
 
         <div className="hidden lg:block">
-          <button className="rounded-[5px] bg-[#0145a7] hover:bg-[#0A2A66]  px-7 py-4 text-sm font-semibold text-white">
+          <Link href="/contact" className="block rounded-[5px] bg-[#0145a7] hover:bg-[#0A2A66]  px-7 py-4 text-sm font-semibold text-white">
             Request Quote
-          </button>
+          </Link>
         </div>
 
         <button
@@ -625,25 +606,51 @@ export default function Header() {
       {open && (
         <div className="border-t border-gray-100 bg-white lg:hidden">
           <div className="space-y-5 px-5 py-6">
-            <button className="block text-lg font-semibold text-[#0A2A66]">
+            <Link
+              href="/"
+              className="block text-lg font-semibold text-[#0A2A66]"
+            >
+              {" "}
               Home
-            </button>
+            </Link>
 
-            <button className="block text-lg font-semibold text-[#0A2A66]">
+            <Link
+              href="/products"
+              className="block text-lg font-semibold text-[#0A2A66]"
+            >
               Products
-            </button>
+            </Link>
 
-            <button className="block text-lg font-semibold text-[#0A2A66]">
+            <Link
+              href="/industries"
+              className="block text-lg font-semibold text-[#0A2A66]"
+            >
               Industries
-            </button>
+            </Link>
 
-            <button className="block text-lg font-semibold text-[#0A2A66]">
-              Solutions
-            </button>
+            <Link
+              href="/services"
+              className="block text-lg font-semibold text-[#0A2A66]"
+              onClick={() => setOpen(false)}
+            >
+              Services
+            </Link>
 
-            <button className="mt-4 w-full rounded-2xl bg-[#0A2A66] px-6 py-4 font-semibold text-white">
+            <Link
+              href="/contact"
+              className="block text-lg font-semibold text-[#0A2A66]"
+              onClick={() => setOpen(false)}
+            >
+              Contact
+            </Link>
+
+            <Link
+              href="/contact"
+              className="mt-4 block w-full rounded-2xl bg-[#0A2A66] px-6 py-4 text-center font-semibold text-white"
+              onClick={() => setOpen(false)}
+            >
               Request Quote
-            </button>
+            </Link>
           </div>
         </div>
       )}

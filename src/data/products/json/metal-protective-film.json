@@ -1,0 +1,112 @@
+{
+  "slug": "metal-protective-film",
+  "name": "Metal Protective Film",
+  "category": "Protective Materials",
+  "type": "PanelAccessory",
+
+  "subtitle": "The best protective film for sandwich panels.",
+
+  "thumbnail": "/images/products/metalProtectiveFilm/metalProtectiveFilm.png",
+
+  "hero": {
+    "eyebrow": "PACKAGING MATERIALS, PROTECTIVE FILMS",
+    "title": "Metal Protective Film",
+    "description": "PE protective film specifically designed for metal surface protection throughout the sandwich panel life cycle."
+  },
+
+  "shortDescription": "High-performance PE protective film engineered for metal surface protection, offering excellent UV resistance, anti-aging performance and clean removal without adhesive residue.",
+
+  "longDescription": "Motisan Metal Surface Protective Film is a PE protective film specifically designed for metal surface protection, primarily used for sandwich panels throughout their product life cycle. Developed with holistic thinking, our double-anti film is easy to unwind and laminate while delivering excellent easy-peel performance after installation. Engineered to withstand Australia's demanding weather conditions, it incorporates anti-aging agents and UV stabilizers to provide long-lasting outdoor protection backed by a 6-month outdoor guarantee.",
+
+  "features": [
+    {
+      "content": "Anti-Aging & UV Resistant",
+      "explain": "Provides long-lasting outdoor protection with anti-aging agents and UV stabilizers. Remains durable and easy to remove after extended exposure."
+    },
+    {
+      "content": "Easy Peel",
+      "explain": "Specially formulated adhesive adheres securely during manufacturing while allowing clean removal without residue."
+    },
+    {
+      "content": "Printable",
+      "explain": "Supports logo printing and branding applications with up to 3 colours."
+    },
+    {
+      "content": "Customisable",
+      "explain": "Can be customised to suit specific metal surfaces and project requirements."
+    }
+  ],
+
+  "applications": [
+    "Sandwich Panels",
+    "Insulated Panel Manufacturing",
+    "Panel Transportation",
+    "Panel Installation",
+    "Metal Surface Protection",
+    "Construction Projects"
+  ],
+
+  "specifications": {
+    "Material": "PE Protective Film",
+    "Available Length": "200–2000 m",
+    "Width": "500–1300 mm",
+    "Thickness": "30–80 mic",
+    "Viscosity": "Middle, High",
+    "Custom Viscosity": "Available",
+    "UV Resistant": "Yes, 6 months guarantee",
+    "Anti-Aging": "Yes, 6 months guarantee",
+    "Printable": "Yes, up to 3 colours"
+  },
+
+  "featureHighlights": [
+    "6-Month Outdoor Guarantee",
+    "UV Resistant",
+    "Anti-Aging",
+    "Easy Peel",
+    "Printable",
+    "Customisable"
+  ],
+
+  "whyChoose": "Motisan Metal Protective Film is specifically engineered for sandwich panel manufacturers and installers. Combining UV resistance, anti-aging protection and clean peel technology, it safeguards metal surfaces throughout production, transportation and installation. The film removes cleanly without residue, reducing labour costs while maintaining a professional finish.",
+
+  "downloads": [
+    {
+      "title": "Motisan Metal Protective Film Brochure",
+      "file": "/downloads/motisan-protection-film.pdf"
+    }
+  ],
+
+  "gallery": [
+    {
+      "title": "metalProtectiveFilm",
+      "url": "/images/products/metalProtectiveFilm/metalProtectiveFilm.png",
+      "type": "image"
+    },
+    {
+      "title": "protectiveFilm1",
+      "url": "/images/products/metalProtectiveFilm/protectiveFilm1.mp4",
+      "type": "video",
+        "cover": "/images/products/metalProtectiveFilm/videoframe_0.png"
+    },
+     {
+      "title": "protectiveFilm2",
+      "url": "/images/products/metalProtectiveFilm/protectiveFilm2.mp4",
+      "type": "video",
+      "cover": "/images/products/metalProtectiveFilm/videoframe_1.png"
+    }
+  ],
+
+  "seo": {
+    "title": "Metal Protective Film | Motisan",
+    "description": "PE protective film designed for sandwich panel and metal surface protection with UV resistance, anti-aging technology and easy peel performance.",
+    "keywords": [
+      "Protective Film",
+      "Metal Protective Film",
+      "Sandwich Panel Film",
+      "PE Protective Film",
+      "UV Resistant Film",
+      "Easy Peel Film",
+      "Motisan"
+    ]
+  }
+}

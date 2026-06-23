@@ -1,0 +1,147 @@
+{
+  "slug": "donga-door-inswing",
+  "name": "Donga Door(Inswing)",
+  "category": "Doors",
+  
+  "subtitle": "Cyclone rated inswing steel door for transportable and modular buildings.",
+
+  "shortDescription": "Australian engineered pre-hung steel door designed for transportable buildings, container modifications, steel frame sheds and modular construction. Built to withstand cyclone conditions while delivering reliable weatherproof performance.",
+
+  "longDescription": "The Motisan Donga Door (Inswing) is engineered and manufactured to meet Australian standards and requirements. Featuring a pre-hung dual frame system, galvanised steel construction, UV-resistant powder coating and fire-resistant rockwool insulation, this door is designed for transportable buildings, container modifications, steel frame sheds and block wall applications. The custom-made bottom frame incorporates three drainage slots to improve water management while maintaining a tight weather seal. Certified to AS/NZS 1170.2:2021 Cyclonic Region C requirements, it provides dependable performance in Australia's harshest environments.",
+  
+  "heroImage": "/images/products/donga-door-inswing/hero.png",
+
+  "features": [
+    {
+      "content": "Pre-Hung Dual Frame System",
+      "explain": "Supplied pre-hung with a dual frame system for fast installation across transportable buildings, steel frame structures and modular projects."
+    },
+    {
+      "content": "Cyclonic Region C Certified",
+      "explain": "Designed and certified to AS/NZS 1170.2:2021 requirements for Cyclonic Region C and suitable for demanding Australian conditions."
+    },
+    {
+      "content": "Weatherproof Four-Sided Frame",
+      "explain": "A durable four-sided frame with gasket sealing helps prevent water ingress and improves weatherproof performance."
+    },
+    {
+      "content": "Integrated Drainage System",
+      "explain": "Custom-made bottom frame with three slot holes provides effective water drainage while maintaining a secure weather seal."
+    },
+    {
+      "content": "Heavy-Duty Galvanised Steel Construction",
+      "explain": "Manufactured using galvanised steel door leaf and frame for excellent durability, corrosion resistance and long-term reliability."
+    },
+    {
+      "content": "Thermal & Fire Protection",
+      "explain": "Fire-resistant rockwool insulation improves thermal performance while contributing to occupant safety."
+    }
+  ],
+
+  "applications": [
+    "Transportable Buildings",
+    "Container Modifications",
+    "Steel Frame Sheds",
+    "Block Walls",
+    "Modular Buildings",
+    "Accommodation Units"
+  ],
+
+  "specifications": {
+    "Structural Material": "Galvanised steel",
+    "Steel Thickness": "Door leaf 0.8mm / Door frame 1.5mm",
+    "Finish": "UV-Resistant Powder Coating",
+    "Infill Insulation": "Fire-resistant Rockwool (Mineral Wool), R-value 1.40 m²K/W",
+    "Hinge": "3 Stainless Steel Hinges",
+    "Swing Direction": "Inswing",
+    "Certification": "AS/NZS 1170.2:2021 Cyclonic Region C",
+    "Size": "820×2075×50, 920×2075×50, 1020×2075×50",
+    "Clear Opening": "794×2050, 894×2050, 994×2050",
+    "Customization": "Custom sizes available on request",
+    "View Window": "Double-glazing view windows",
+    "Kick Plate": "Optional stainless steel kick plates",
+    "Powder Coating": "Available in various colours or dual-colour finishes"
+  },
+
+  "sizes": [
+    {
+      "doorLeaf": "820×2075×50",
+      "clearOpening": "794×2050"
+    },
+    {
+      "doorLeaf": "920×2075×50",
+      "clearOpening": "894×2050"
+    },
+    {
+      "doorLeaf": "1020×2075×50",
+      "clearOpening": "994×2050"
+    }
+  ],
+
+  "options": [
+    "Double-glazing view windows",
+    "Stainless steel kick plates",
+    "Powder coating in various colours",
+    "Dual-colour powder coating",
+    "Custom sizes available"
+  ],
+
+  "locks": [
+    {
+      "name": "Lever",
+      "image": ""
+    },
+    {
+      "name": "DDA Compliant",
+      "image": ""
+    },
+    {
+      "name": "Mortice",
+      "image": ""
+    },
+    {
+      "name": "Security Lock",
+      "image": ""
+    }
+  ],
+
+  "colours": [],
+
+  "downloads": [
+    {
+      "title": "Motisan-Donga-Door-Inswing-SD02_brochure_T2-2025.02",
+      "file": "/downloads/motisan-donga-door-inswing-brochure.pdf"
+    }
+  ],
+
+  "gallery": [
+    {
+      "title": "Powder Coat Monument",
+      "url":  "/images/products/dongaDoorInswing/dongaDoorInswing-1.jpg",
+      "type": "image"
+    }
+   ,
+    {
+      "title": "Powder Coat Monument",
+      "url":  "/images/products/dongaDoorInswing/dongaDoorInswing-2.jpg",
+      "type": "image"
+    }
+  ],
+
+  "whyChoose": "The Motisan Donga Door (Inswing) combines cyclone-rated strength, weatherproof protection and installation efficiency in a single solution. Engineered for Australian conditions and certified for Cyclonic Region C, it is an ideal choice for transportable buildings, modular structures and steel frame construction projects requiring dependable long-term performance.",
+
+  "seo": {
+    "title": "Donga Door Inswing | Cyclone Rated Steel Door for Transportable Buildings",
+    "description": "Australian engineered inswing steel door certified for Cyclonic Region C. Ideal for transportable buildings, modular construction, steel frame sheds and container modifications.",
+    "keywords": [
+      "donga door inswing",
+      "inswing steel door",
+      "cyclone rated door",
+      "transportable building door",
+      "container modification door",
+      "modular building door",
+      "weatherproof steel door",
+      "steel frame shed door"
+    ]
+  }
+}

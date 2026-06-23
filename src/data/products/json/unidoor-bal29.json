@@ -1,0 +1,149 @@
+{
+  "slug": "unidoor-bal29",
+  "name": "UniDoor BAL29",
+  "category": "Doors",
+
+  "subtitle": "Pre-hung insulated steel doorset designed for Australian bushfire-prone construction.",
+
+  "shortDescription": "UniDoor BAL29 is a pre-hung insulated steel doorset engineered for external applications in Australian bushfire-prone areas. Designed with a non-combustible metal clad door leaf and rockwool insulation, it provides compliance pathways for BAL 12.5, BAL 19 and BAL 29 construction requirements.",
+
+  "longDescription": "Designed and engineered for Australian bushfire-prone construction, UniDoor BAL29 combines a non-combustible steel-faced door leaf, rockwool insulated core and integrated pre-hung steel frame system. Suitable for insulated panel buildings, modular construction and steel framing systems, the doorset delivers reliable performance, simplified installation and enhanced fire resistance while meeting the construction requirements of AS 3959:2018.",
+
+  "heroImage": "/images/products/unidoor/ArmourGrey.png",
+
+  "features": [
+    {
+      "content": "BAL29 Ready",
+      "explain": "Designed for BAL-rated applications and suitable for projects requiring compliance pathways for BAL 12.5, BAL 19 and BAL 29 construction requirements."
+    },
+    {
+      "content": "Non-Combustible Door Leaf",
+      "explain": "Steel-faced rockwool insulated construction designed to support improved fire performance pathways in bushfire-prone areas."
+    },
+    {
+      "content": "Pre-Hung System",
+      "explain": "Integrated steel frame system supplied pre-hung for faster installation and simplified onsite coordination."
+    },
+    {
+      "content": "Wind Load Tested",
+      "explain": "Tested to relevant Australian wind loading requirements for demanding environments, including modular and transportable building applications."
+    },
+    {
+      "content": "Modular Compatible",
+      "explain": "Suitable for insulated panel buildings, modular construction and steel framing systems."
+    },
+    {
+      "content": "Thermal & Acoustic Benefits",
+      "explain": "Rockwool insulated core assists thermal performance and improves acoustic comfort."
+    }
+  ],
+   "colours": [
+    "Light Oak Laminate",
+    "Armour Grey",
+    "Armour Grey with Window",
+    "LightOak Laminate with Window",
+    "Off White",
+    "Off White with Window",
+    "Powder Coat Basalt",
+    "Powder Coat Monument"
+  ],
+  "gallery": [
+    "/images/products/unidoor/LightOakLaminate.jpg",
+
+    "/images/products/unidoor/ArmourGrey.jpg",
+
+    "/images/products/unidoor/ArmourGreywithWindow.jpg",
+
+    "/images/products/unidoor/LightOakLaminatewithWindow.jpg",
+
+    "/images/products/unidoor/OffWhite.jpg",
+
+    "/images/products/unidoor/OffWhitewithWindow.jpg",
+    "/images/products/unidoor/PowderCoatBasalt2.jpg",
+    "/images/products/unidoor/PowderCoatMonument2.jpg"
+  ],
+  "applications": [
+    "Bushfire-Prone Construction",
+    "Insulated Panel Buildings",
+    "Modular Buildings",
+    "Steel Frame Buildings",
+    "External Door Applications",
+    "Transportable Buildings"
+  ],
+
+  "specifications": {
+    "Door Type": "Pre-hung insulated steel doorset",
+    "Door Leaf Thickness": "50 mm",
+    "Door Face Material": "0.8 mm galvanised steel",
+    "Door Frame": "1.5 mm galvanised steel",
+    "Core Material": "Rockwool mineral wool",
+    "Finish": "UV-resistant powder coating",
+    "Hinges": "Stainless Steel Hinges",
+    "Bottom Seal": "Automatic drop-down seal",
+    "Weather Seals": "BAL-rated perimeter seals",
+    "Standard Sizes": "820 / 920 / 1020 mm",
+    "Applications": "External & Internal"
+  },
+
+  "sizes": [
+    {
+      "doorLeaf": "820 mm",
+      "clearOpening": "-"
+    },
+    {
+      "doorLeaf": "920 mm",
+      "clearOpening": "-"
+    },
+    {
+      "doorLeaf": "1020 mm",
+      "clearOpening": "-"
+    }
+  ],
+
+  "options": [
+    "BAL-rated applications",
+    "Automatic drop-down seal",
+    "BAL-rated perimeter seals",
+    "Additional colours available upon request"
+  ],
+
+  "locks": [
+    {
+      "name": "Lever",
+      "image": ""
+    },
+    {
+      "name": "DDA Compliant",
+      "image": ""
+    },
+    {
+      "name": "Mortice",
+      "image": ""
+    }
+  ],
+
+
+  "downloads": [
+    {
+      "title": "Product Brochure",
+      "file": "/downloads/unidoor-bal29-brochure.pdf"
+    }
+  ],
+
+  "whyChoose": "UniDoor BAL29 is specifically engineered for Australian bushfire-prone construction. Combining a non-combustible steel-faced door leaf, rockwool insulated core, BAL-rated sealing system and pre-hung installation design, it provides builders with a practical solution for projects requiring bushfire compliance pathways while maintaining durability, thermal performance and ease of installation.",
+
+  "seo": {
+    "title": "UniDoor BAL29 | Steel Bushfire Doorset for Bushfire-Prone Construction",
+    "description": "Pre-hung insulated steel doorset designed for Australian bushfire-prone construction. Suitable for BAL 12.5, BAL 19 and BAL 29 applications.",
+    "keywords": [
+      "BAL29 door",
+      "bushfire door",
+      "steel bushfire doorset",
+      "BAL rated door",
+      "UniDoor BAL29",
+      "modular building door",
+      "insulated panel door",
+      "Australian bushfire construction"
+    ]
+  }
+}

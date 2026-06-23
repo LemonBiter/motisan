@@ -1,0 +1,1 @@
+export const COMING_SOON_PRODUCTS = ['ambient-rapid-door', 'coolroom-rapid-door', 'freezer-rapid-door'];
