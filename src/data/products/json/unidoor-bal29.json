@@ -48,19 +48,46 @@
     "Powder Coat Monument"
   ],
   "gallery": [
-    "/images/products/unidoor/LightOakLaminate.jpg",
-
-    "/images/products/unidoor/ArmourGrey.jpg",
-
-    "/images/products/unidoor/ArmourGreywithWindow.jpg",
-
-    "/images/products/unidoor/LightOakLaminatewithWindow.jpg",
-
-    "/images/products/unidoor/OffWhite.jpg",
-
-    "/images/products/unidoor/OffWhitewithWindow.jpg",
-    "/images/products/unidoor/PowderCoatBasalt2.jpg",
-    "/images/products/unidoor/PowderCoatMonument2.jpg"
+    {
+      "title": "Light Oak Laminate Finish",
+      "url": "/images/products/unidoor/LightOakLaminate.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Armour Grey",
+      "url": "/images/products/unidoor/ArmourGrey.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Armour Grey with Window",
+      "url": "/images/products/unidoor/ArmourGreywithWindow.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Light Oak Laminate with Window ",
+      "url": "/images/products/unidoor/LightOakLaminatewithWindow.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Off White",
+      "url": "/images/products/unidoor/OffWhite.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Off White with Window",
+      "url": "/images/products/unidoor/OffWhitewithWindow.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Powder Coat Basalt",
+      "url": "/images/products/unidoor/PowderCoatBasalt2.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Powder Coat Monument",
+      "url": "/images/products/unidoor/PowderCoatMonument2.jpg",
+      "type": "image"
+    }
   ],
   "applications": [
     "Bushfire-Prone Construction",

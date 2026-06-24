@@ -18,7 +18,7 @@ export default function ProductGallery({
 }: ProductGalleryProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [current, setCurrent] = useState(0);
-
+  console.log(images)
   const handleThumbnailClick = (index: number) => {
     if (emblaApi) {
       emblaApi.scrollTo(index);
