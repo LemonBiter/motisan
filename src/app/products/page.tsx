@@ -13,11 +13,11 @@ const categories = [
   { key: "Panel Protection & Accessories", value: "PanelAccessory" },
 ];
 
-export const metadata = {
-  title: "Products",
-  description:
-    "Explore Motisan's range of insulated panel doors, cold room doors, freezer doors and modular building products.",
-};
+// export const metadata = {
+//   title: "Products",
+//   description:
+//     "Explore Motisan's range of insulated panel doors, cold room doors, freezer doors and modular building products.",
+// };
 // const products = [
 //   {
 //     name: "UniDoor",
