@@ -13,6 +13,11 @@ const categories = [
   { key: "Panel Protection & Accessories", value: "PanelAccessory" },
 ];
 
+export const metadata = {
+  title: "Products",
+  description:
+    "Explore Motisan's range of insulated panel doors, cold room doors, freezer doors and modular building products.",
+};
 // const products = [
 //   {
 //     name: "UniDoor",
@@ -39,7 +44,6 @@ export default function CategoryPage() {
   const [viewMode, setViewMode] = useState<"grid" | "list">("grid");
 
   const filteredProducts = useMemo(() => {
-    console.log('products:', products)
     if (activeCategory === "AllProducts") return products;
 
     return products.filter(

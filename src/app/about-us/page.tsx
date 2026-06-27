@@ -1,24 +1,16 @@
 // src/app/products/[slug]/page.tsx
 
 import Image from "next/image";
-import Link from "next/link";
-import {
-  ChevronRight,
-  Download,
-  ShieldCheck,
-  Accessibility,
-  Wrench,
-  Factory,
-  CheckCircle2,
-  ArrowLeft,
-  ArrowRight,
-  Clock3,
-} from "lucide-react";
 
-import productList from "@/data/products/json/index.json";
-import ProductGallery from "@/components/product/ProductGallery";
-import { COMING_SOON_PRODUCTS } from "@/app/const";
+export const metadata = {
 
+  title: "About Us",
+
+  description:
+
+    "Learn more about Motisan Pty Ltd, our commitment to quality, innovation and modular building solutions.",
+
+};
 
 export default async function AboutUs() {
  

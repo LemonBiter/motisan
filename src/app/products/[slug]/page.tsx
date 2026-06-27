@@ -24,7 +24,7 @@ export async function generateMetadata({
   params,
 }: {
   params: Promise<{ slug: string }>;
-}) {
+}): Promise<Metadata> {
   const { slug } = await params;
 
   try {
@@ -34,10 +34,30 @@ export async function generateMetadata({
 
     return {
       title: product.seo?.title || product.name,
-      description: product.seo?.description || product.description,
+
+      description: product.seo?.description || product.shortDescription,
+
       keywords: product.seo?.keywords || [],
+
+      alternates: {
+        canonical: `https://motisan.com.au/products/${slug}`,
+      },
+
+      openGraph: {
+        title: product.seo?.title || product.name,
+
+        description: product.seo?.description || product.shortDescription,
+
+        url: `https://motisan.com.au/products/${slug}`,
+
+        images: [
+          {
+            url: product.heroImage || product.gallery?.[0],
+          },
+        ],
+      },
     };
-  } catch (error) {
+  } catch {
     return {
       title: "Product Not Found",
     };
@@ -301,39 +321,39 @@ export default async function ProductPage({
               .filter((item) => item.slug !== product.slug)
               .slice(0, 4)
               .map((item) => (
-              <Link
-                key={item.slug}
-                href={`/products/${item.slug}`}
-                className="group overflow-hidden rounded-[5px] border border-gray-200 bg-white transition hover:-translate-y-1 hover:border-[#002D72] hover:shadow-[0_18px_60px_rgba(6,24,58,0.08)]"
-              >
-                <div className="relative aspect-[4/3] overflow-hidden bg-[#f5f7fb]">
-                  <Image
-                    src={item.thumbnail || "/logo/unknown-img.png"}
-                    alt={item.name}
-                    fill
-                    className="object-cover transition duration-500 group-hover:scale-105"
-                  />
-                </div>
+                <Link
+                  key={item.slug}
+                  href={`/products/${item.slug}`}
+                  className="group overflow-hidden rounded-[5px] border border-gray-200 bg-white transition hover:-translate-y-1 hover:border-[#002D72] hover:shadow-[0_18px_60px_rgba(6,24,58,0.08)]"
+                >
+                  <div className="relative aspect-[4/3] overflow-hidden bg-[#f5f7fb]">
+                    <Image
+                      src={item.thumbnail || "/logo/unknown-img.png"}
+                      alt={item.name}
+                      fill
+                      className="object-cover transition duration-500 group-hover:scale-105"
+                    />
+                  </div>
 
-                <div className="p-6">
-                  <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
-                    {item.category}
-                  </p>
+                  <div className="p-6">
+                    <p className="mb-2 text-xs font-semibold uppercase tracking-wide text-slate-400">
+                      {item.category}
+                    </p>
 
-                  <h4 className="mb-3 text-xl font-semibold text-[#06183a]">
-                    {item.name}
-                  </h4>
+                    <h4 className="mb-3 text-xl font-semibold text-[#06183a]">
+                      {item.name}
+                    </h4>
 
-                  <p className="mb-6 min-h-[48px] text-sm leading-6 text-slate-600">
-                    {item.subtitle}
-                  </p>
+                    <p className="mb-6 min-h-[48px] text-sm leading-6 text-slate-600">
+                      {item.subtitle}
+                    </p>
 
-                  <span className="inline-flex items-center gap-2 font-semibold text-[#002D72] transition group-hover:translate-x-1">
-                    View Details
-                    <ArrowRight className="h-4 w-4" />
-                  </span>
-                </div>
-              </Link>
+                    <span className="inline-flex items-center gap-2 font-semibold text-[#002D72] transition group-hover:translate-x-1">
+                      View Details
+                      <ArrowRight className="h-4 w-4" />
+                    </span>
+                  </div>
+                </Link>
               ))}
           </div>
         </div>
