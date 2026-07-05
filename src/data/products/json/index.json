@@ -9,7 +9,7 @@
     "thumbnail": "/images/products/unidoor/LightOakLaminate.jpg",
     "subtitle": "Pre-hung insulated panel door"
   },
-{
+  {
     "slug": "insulated-sectional-door",
     "name": "Insulated Sectional Door",
     "type": "Industries",
@@ -48,6 +48,15 @@
     "subtitle": "Cyclone rated inswing steel door "
   },
   {
+    "slug": "donga-door-bal29",
+
+    "name": "Donga Door BAL29",
+    "type": "MetalCladDoor",
+    "category": "Doors",
+    "thumbnail": "/images/products/dongaDoorOutswing/dongaDoorOutswing-2.jpg",
+    "subtitle": "BAL29 ready insulated steel doorset for transportable and modular buildings."
+  },
+  {
     "slug": "unidoor-bal29",
     "name": "UniDoor BAL29",
 
@@ -63,7 +72,8 @@
 
     "type": "HighSpeedDoor",
     "category": "Doors",
-    "subtitle": ""
+    "subtitle": "",
+    "thumbnail": "/logo/unknown-img.png"
   },
   {
     "slug": "coolroom-rapid-door",
@@ -71,7 +81,8 @@
 
     "type": "HighSpeedDoor",
     "category": "Doors",
-    "subtitle": ""
+    "subtitle": "",
+    "thumbnail": "/logo/unknown-img.png"
   },
   {
     "slug": "freezer-rapid-door",
@@ -79,6 +90,7 @@
 
     "type": "HighSpeedDoor",
     "category": "Doors",
-    "subtitle": ""
+    "subtitle": "",
+    "thumbnail": "/logo/unknown-img.png"
   }
 ]

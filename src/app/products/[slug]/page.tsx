@@ -28,7 +28,6 @@ export async function generateMetadata({
   params: Promise<{ slug: string }>;
 }): Promise<Metadata> {
   const { slug } = await params;
-
   try {
     const product = await import(`@/data/products/json/${slug}.json`).then(
       (mod) => mod.default,
@@ -54,7 +53,7 @@ export async function generateMetadata({
 
         images: [
           {
-            url: product.heroImage || product.gallery?.[0],
+            url: product?.heroImage || product?.thumbnail || '/logo/unknown-img.png',
           },
         ],
       },
@@ -80,12 +79,15 @@ export default async function ProductPage({
     product = await import(`@/data/products/json/${slug}.json`).then(
       (mod) => mod.default,
     );
+
     if (!product) {
       throw new Error("Cannot find product data");
     }
   } catch (error) {
     return <ProductComingSoon />;
   }
+
+  console.log(product);
 
   return (
     <main className="bg-white">

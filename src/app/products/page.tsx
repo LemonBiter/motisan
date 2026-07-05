@@ -108,10 +108,10 @@ export default function CategoryPage() {
                 Doors
               </label>
 
-              <label className="flex gap-3">
+              {/* <label className="flex gap-3">
                 <input type="checkbox" />
                 Windows
-              </label>
+              </label> */}
 
               <label className="flex gap-3">
                 <input type="checkbox" />

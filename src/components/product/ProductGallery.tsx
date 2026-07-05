@@ -18,12 +18,10 @@ export default function ProductGallery({
 }: ProductGalleryProps) {
   const [emblaRef, emblaApi] = useEmblaCarousel({ loop: true });
   const [current, setCurrent] = useState(0);
-  console.log(images)
   const handleThumbnailClick = (index: number) => {
     if (emblaApi) {
       emblaApi.scrollTo(index);
     }
-    // console.log(colors[current]);
     setCurrent(index);
   };
 
@@ -32,7 +30,6 @@ export default function ProductGallery({
       <div className="overflow-hidden" ref={emblaRef}>
         <div className="flex lg:h-[500px]">
           {images.map((image, index) => {
-            console.log(image);
             if (image.type === "video") {
               return (
                 <div

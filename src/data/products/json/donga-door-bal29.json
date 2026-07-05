@@ -1,0 +1,141 @@
+{
+  "slug": "donga-door-bal29",
+  "name": "Donga Door BAL29",
+  "category": "Doors",
+
+  "subtitle": "BAL29 ready insulated steel doorset for transportable and modular buildings.",
+
+  "shortDescription": "Australian engineered pre-hung insulated steel doorset designed for transportable buildings, modular accommodation and remote site applications. BAL29 ready, wind load tested and built for demanding Australian conditions.",
+
+  "longDescription": "The Motisan Donga Door BAL29 is a pre-hung insulated steel doorset engineered for transportable buildings, modular accommodation and remote site applications across Australia. Featuring a dual-frame system, galvanised steel construction and Rockwool insulated core, it delivers reliable durability, thermal performance and security in harsh environments. The doorset has been wind load tested in accordance with Section 7 of AS/NZS 4420.1:2016 and is suitable for BAL29 applications in accordance with AS 3959 requirements.",
+
+  "heroImage": "/images/products/dongaDoorOutswing/dongaDoorOutswing-2.jpg",
+
+   "gallery": [
+    {
+      "title": "Powder Coat Monument",
+      "url":  "/images/products/dongaDoorOutswing/dongaDoorOutswing-1.jpg",
+      "type": "image"
+    }
+   ,
+    {
+      "title": "Powder Coat Monument2",
+      "url":  "/images/products/dongaDoorOutswing/dongaDoorOutswing-2.jpg",
+      "type": "image"
+    },
+    {
+      "title": "Powder Coat Monument3",
+      "url":  "/images/products/dongaDoorOutswing/dongaDoorOutswing-3.jpg",
+      "type": "image"
+    }
+  ],
+
+  "features": [
+    {
+      "content": "BAL29 Ready",
+      "explain": "Designed for BAL-rated applications and assessed against AS 3959 construction requirements for BAL12.5, BAL19 and BAL29."
+    },
+    {
+      "content": "Wind Load Tested",
+      "explain": "Tested to relevant Australian wind loading requirements in accordance with Section 7 of AS/NZS 4420.1:2016."
+    },
+    {
+      "content": "Dual Frame System",
+      "explain": "Pre-hung dual-frame system simplifies installation and is ideal for modular and transportable buildings."
+    },
+    {
+      "content": "Heavy-Duty Steel Construction",
+      "explain": "Manufactured using galvanised steel door leaf and frame with UV-resistant powder coating for long-term durability."
+    },
+    {
+      "content": "Thermal & Acoustic Performance",
+      "explain": "Rockwool mineral wool insulated core improves thermal efficiency and acoustic performance."
+    },
+    {
+      "content": "Commercial Grade Hardware",
+      "explain": "Equipped with heavy-duty stainless steel hinges and commercial locking systems for reliable operation."
+    }
+  ],
+
+  "applications": [
+    "Transportable Buildings",
+    "Modular Accommodation",
+    "Remote Site Buildings",
+    "Site Offices",
+    "Mining Camps",
+    "High Wind Region Projects"
+  ],
+
+  "specifications": {
+    "Door Type": "Pre-hung insulated steel doorset",
+    "Door Leaf Thickness": "50 mm",
+    "Door Face Material": "0.8 mm galvanised steel",
+    "Door Frame": "1.5 mm galvanised steel",
+    "Core Material": "Rockwool mineral wool",
+    "Finish": "UV-resistant powder coating",
+    "Hinges": "Stainless steel hinges",
+    "Weather Seals": "BAL-rated perimeter seals",
+    "Standard Sizes": "820 / 920 / 1020 mm",
+    "Compliance": "AS 3959:2018 Amdt.1 & 2",
+    "Wind Load": "Tested to AS/NZS 4420.1:2016 Section 7",
+    "Fire Assessment": "CSIRO advisory assessment for BAL12.5, BAL19 & BAL29 applications"
+  },
+
+  "sizes": [
+    {
+      "doorLeaf": "820 mm",
+      "clearOpening": ""
+    },
+    {
+      "doorLeaf": "920 mm",
+      "clearOpening": ""
+    },
+    {
+      "doorLeaf": "1020 mm",
+      "clearOpening": ""
+    }
+  ],
+
+  "options": [
+    "Additional powder coat colours available",
+    "Commercial lock options",
+    "Project-specific configurations"
+  ],
+
+  "locks": [
+    {
+      "name": "Commercial Lockset",
+      "image": ""
+    }
+  ],
+
+   "downloads": [
+    {
+      "title": "Motisan-Donga-Door-Outswing-Brochure",
+      "file": "/downloads/Motisan-Donga-Door-BAL29-Brochure.pdf"
+    },
+    {
+      "title": "4-Side-Frame-Donga-door-Installation-Instruction",
+      "file": "/downloads/4-Side-Frame-Donga-door-Installation-Instruction.pdf"
+    }
+  ],
+
+  "whyChoose": "The Motisan Donga Door BAL29 is purpose-built for Australian transportable and modular construction projects where bushfire compliance, wind resistance and long-term durability are essential. Combining BAL29 readiness, wind load tested performance, a pre-hung dual-frame system and Rockwool insulated steel construction, it delivers a dependable solution for remote and high-wind environments.",
+
+  "seo": {
+    "title": "Donga Door BAL29 | BAL29 Ready Steel Door for Modular Buildings",
+    "description": "Australian engineered BAL29 ready insulated steel doorset for transportable buildings, modular accommodation and remote site projects. Wind load tested and built for Australian conditions.",
+    "keywords": [
+      "BAL29 door",
+      "donga door BAL29",
+      "bushfire rated door",
+      "transportable building door",
+      "modular building door",
+      "wind load tested door",
+      "steel doorset",
+      "pre-hung steel door",
+      "BAL29 steel door",
+      "Australian modular door"
+    ]
+  }
+}
