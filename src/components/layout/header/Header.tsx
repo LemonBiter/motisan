@@ -123,7 +123,7 @@ export default function Header() {
                   <div className="mt-8 h-[4px] w-16 rounded-full bg-[#0145a7]" />
 
                   <p className="mt-8 text-[15px] leading-2 text-gray-800">
-                    Motisan supplies a comprehensive range of doors, windows,
+                    Motisan supplies a comprehensive range of doors,
                     protective materials and accessories for insulated panel
                     systems.
                   </p>
@@ -387,7 +387,7 @@ export default function Header() {
                   <div className="mt-8 h-[4px] w-16 rounded-full bg-[#0145a7]" />
 
                   <p className="mt-8 text-[15px] leading-2 text-gray-800">
-                    Motisan supplies a comprehensive range of doors, windows,
+                    Motisan supplies a comprehensive range of doors,
                     protective materials and accessories for insulated panel
                     systems.
                   </p>
