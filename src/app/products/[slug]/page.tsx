@@ -53,7 +53,10 @@ export async function generateMetadata({
 
         images: [
           {
-            url: product?.heroImage || product?.thumbnail || '/logo/unknown-img.png',
+            url:
+              product?.heroImage ||
+              product?.thumbnail ||
+              "/logo/unknown-img.png",
           },
         ],
       },
@@ -195,7 +198,7 @@ export default async function ProductPage({
       </section>
 
       {/* content */}
-      <section className="mx-auto max-w-[1440px] grid grid-cols-1 lg:grid-cols-[1fr_500px] gap-[150px] px-5 py-16 lg:px-20 bg-white">
+      <section className="mx-auto max-w-[1440px] grid grid-cols-1 lg:grid-cols-[1fr_0.9fr] gap-[50px] px-5 py-16 lg:px-20 bg-white">
         <div>
           <div>
             <h3 className="text-2xl font-bold text-[#0A2A66]">Description</h3>
@@ -225,23 +228,25 @@ export default async function ProductPage({
               </tbody>
             </table>
           </div>
-          <div>
+          {/* <div>
             <h3 className="text-2xl pt-8 font-bold text-[#0A2A66]">
               Why Choose Motisan Steel Clad door?
             </h3>
 
             <p className="mt-8 leading-8 text-gray-700">{product.whyChoose}</p>
-          </div>
+          </div> */}
         </div>
         {/* features */}
-        <div className="rounded-3xl border border-gray-200 bg-[#f8f9fa] p-8">
+        {/* <div className="rounded-3xl border border-gray-200 bg-[#f8f9fa] p-8"> */}
+        <div className="p-8">
           <h3 className="text-2xl font-bold text-[#0A2A66]">Key Features</h3>
-
-          <div className="mt-8 space-y-5">
+{/* space-y-5 */}
+          <div className="mt-8  grid grid-cols-1 md:grid-cols-2 gap-5">
             {product.features?.map(
               (feature: { content: string; explain: string }) => (
-                <div key={feature.content} className="flex items-start gap-4">
-                  <CheckCircle2 className="mt-1 h-5 w-5 text-[#0145a7]" />
+                <div key={feature.content} className="rounded-2xl border border-gray-200 bg-[#f8f9fa] p-4 flex items-start gap-4">
+               
+                  <CheckCircle2 className="h-5 w-5 text-[#0145a7]" />
                   <div className="w-[85%]">
                     <h1 className="leading-7 font-medium text-[#0A2A66]">
                       {feature.content}

@@ -85,23 +85,23 @@ const processSteps = [
 
 const capabilityItems = [
   {
-    title: "Australian Designed",
-    text: "Built for local conditions",
+    title: "Australian Owned",
+    text: "Local design and engineering",
     icon: ShieldCheck,
   },
   {
-    title: "Industry Focused",
-    text: "Specialists in insulated panel systems",
+    title: "Practical Installation",
+    text: "Designed for easier installation",
     icon: Wrench,
   },
   {
-    title: "National Supply",
-    text: "Reliable support across Australia",
+    title: "Australia-Wide Supply",
+    text: "Supporting customers nationwide",
     icon: Truck,
   },
   {
-    title: "Partner Approach",
-    text: "Working with you for long term success",
+    title: "Quality Focused",
+    text: "Reliable and durable solutions",
     icon: Headphones,
   },
 ];

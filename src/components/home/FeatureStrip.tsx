@@ -1,10 +1,9 @@
 
 const items = [
-  'Australian Designed',
-  'Industry Focused',
-  'Reliable Durability',
-  'National Supply',
-  'Partner Approach'
+  'Australian Owned',
+  'Practical Installation',
+  'Quality Focused',
+  'Australia-Wide Supply',
 ]
 
 export default function FeatureStrip(){

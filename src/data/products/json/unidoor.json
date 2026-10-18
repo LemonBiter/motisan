@@ -2,30 +2,34 @@
   "slug": "unidoor",
   "name": "UniDoor",
   "category": "Doors",
-  "subtitle": "Pre-hung steel door for insulated panel systems.",
-  "shortDescription": "Australian engineered and pre-hung for fast, easy installation. DDA compatible, airtight, durable and built for performance in cleanrooms, insulated panel rooms and steel frame buildings.",
+  "subtitle": "Pre-hung metal clad Door for insulated panels",
+  "shortDescription": "UniDoor features an integrated three-sided box-section frame for quick and straightforward installation. Suitable for insulated panels, steel-framed walls and masonry applications, it combines durable steel construction, practical sealing and a clean, modern finish.",
   "longDescription": "Ready for Installation – The Versatile Steel Door for Insulated Panel Rooms, Cleanrooms, and Steel Frame Buildings. DDA Compatible.Engineered in Australia, the Motisan Steel Clad door is designed with a pre-hung construction that makes installation straightforward and hassle-free. Whether you’re outfitting a cleanroom, insulated panel room, or steel frame building, our door delivers exceptional performance, durability, and ease of installation—all while ensuring DDA compatibility for accessible building design.",
   "heroImage": "/images/products/unidoor/ArmourGrey.png",
   "features": [
     {
-      "content": "Pre-hung design for quick and easy installation",
-      "explain": "Our door comes pre-hung on a box section frame, ensuring a smooth, integrated installation process. With this ready-for-installation design, you enjoy a quicker setup and a seamless finish, minimizing downtime on your project."
+      "content": "Pre-hung Installation",
+      "explain": "Integrated box-section frame designed to simplify installation and reduce on-site assembly work."
     },
     {
-      "content": "Robust Steel & Metal Clad Construction",
-      "explain": "Built as a high-performance steel clad door, the door is crafted to serve as both a steel clad and steel clad solution, delivering exceptional durability and security for any environment."
+      "content": "Versatile Wall Compatibility",
+      "explain": "Suitable for insulated panels, steel-framed walls and masonry walls with thicknesses of 50 mm or greater."
     },
     {
-      "content": "Airtightness & Sealing",
-      "explain": "Featuring a rebate door leaf design with premium rubber-plastic seals and an automatic drop-down bottom seal, our door maintains excellent airtight integrity—ideal for controlled environments."
+      "content": " Sealing & Airtightness",
+      "explain": "Rebated door leaf with perimeter seals and an automatic drop-down bottom seal to improve airtightness."
     },
     {
-      "content": "DDA compliant for inclusive buildings",
-      "explain": "Designed with DDA compatibility in mind, the Motisan Steel Clad door ensures your building meets accessibility requirements and provides an inclusive environment for all users."
+      "content": "Cyclonic Region C Certified",
+      "explain": "Wind performance certification to AS/NZS 1170.2:2021, subject to the certified configuration and installation requirements."
     },
     {
-      "content": "UV-Resistant Powder Coating & Modern Aesthetics",
-      "explain": "Enjoy a long-lasting, low-maintenance finish with UV-resistant powder coating that resists fading. The sleek design is complemented by a double-layer tempered glass view window for added style and functionality."
+      "content": "Durable Steel Construction",
+      "explain": "Galvanised steel door leaf and frame with a UV-resistant powder-coated finish."
+    },
+    {
+      "content": "Flexible Configurations",
+      "explain": "Single and double door configurations, with optional vision panels, kick plates and colour finishes."
     }
   ],
 
@@ -39,27 +43,19 @@
   ],
 
   "specifications": {
-    "Structural Material": "Galvanised steel",
+    "Door Type": "Pre-hung insulated steel-clad door",
 
-    "Steel Thickness": "Door leaf 0.8mm / Door frame 1.5mm",
+    "Frame": "3-sided box-section frame",
 
-    "Finish": "UV-Resistant Powder Coating",
+    "Door Leaf": "50 mm thick",
 
-    "Infill Insulation": "Fire-resistant Rockwool (Mineral Wool), R-value 1.40 m²K/W",
+    "Wall Compatibility": "Insulated panels, steel-framed and masonry walls",
 
-    "Hinge": "3 Stainless Steel Hinges",
+    "Wall Thickness": "≥ 50 mm",
 
-    "Size": "820×2060×50, 920×2060×50, 1020×2060×50",
+    "Configurations": "Single and double doors",
 
-    "Clear Opening": "790×2045, 890×2045, 990×2045",
-
-    "Customization": "Custom sizes available on request",
-
-    "View Window": "Double-glazing tempered glass",
-
-    "Kick Plate": "Optional stainless steel kick plate",
-
-    "Powder Coating": "Available in various colours"
+    "Wind Certification": "Cyclonic Region C — AS/NZS 1170.2:2021"
   },
 
   "sizes": [

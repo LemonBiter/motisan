@@ -325,39 +325,39 @@ export default function Header() {
               {/* Bottom Strip */}
               <div className="grid grid-cols-5 gap-8 bg-gradient-to-r from-[#041B44] to-[#0145a7] px-10 py-6 text-white">
                 <div>
-                  <h4 className="font-semibold">Australian Designed</h4>
+                  <h4 className="font-semibold">Australian Owned</h4>
                   <p className="mt-2 text-sm text-white/70">
-                    Built for local conditions
+                    Local design and engineering
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold">Industry Focused</h4>
+                  <h4 className="font-semibold">Practical Installation</h4>
                   <p className="mt-2 text-sm text-white/70">
-                    Specialists in insulated panel systems
+                    Designed for easier installation
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold">Quality Products</h4>
+                  <h4 className="font-semibold">Quality Focused</h4>
                   <p className="mt-2 text-sm text-white/70">
-                    Tested, certified and built to perform
+                    Reliable and durable solutions
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold">National Supply</h4>
+                  <h4 className="font-semibold">Australia-Wide Supply</h4>
                   <p className="mt-2 text-sm text-white/70">
-                    Fast, reliable delivery across Australia
+                    Supporting customers nationwide
                   </p>
                 </div>
 
-                <div>
+                {/* <div>
                   <h4 className="font-semibold">Partner Approach</h4>
                   <p className="mt-2 text-sm text-white/70">
                     Working with you for long term success
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
@@ -541,39 +541,39 @@ export default function Header() {
               {/* Bottom Strip */}
               <div className="grid grid-cols-5 gap-8 bg-gradient-to-r from-[#041B44] to-[#0145a7] px-10 py-6 text-white">
                 <div>
-                  <h4 className="font-semibold">Australian Designed</h4>
+                  <h4 className="font-semibold">Australian Owned</h4>
                   <p className="mt-2 text-sm text-white/70">
-                    Built for local conditions
+                    Local design and engineering
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold">Industry Focused</h4>
+                  <h4 className="font-semibold">Practical Installation</h4>
                   <p className="mt-2 text-sm text-white/70">
-                    Specialists in insulated panel systems
+                    Designed for easier installation
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold">Quality Products</h4>
+                  <h4 className="font-semibold">Quality Focused</h4>
                   <p className="mt-2 text-sm text-white/70">
-                    Tested, certified and built to perform
+                    Reliable and durable solutions
                   </p>
                 </div>
 
                 <div>
-                  <h4 className="font-semibold">National Supply</h4>
+                  <h4 className="font-semibold">Australia-Wide Supply</h4>
                   <p className="mt-2 text-sm text-white/70">
-                    Fast, reliable delivery across Australia
+                    Supporting customers nationwide
                   </p>
                 </div>
 
-                <div>
+                {/* <div>
                   <h4 className="font-semibold">Partner Approach</h4>
                   <p className="mt-2 text-sm text-white/70">
                     Working with you for long term success
                   </p>
-                </div>
+                </div> */}
               </div>
             </div>
           </div>
