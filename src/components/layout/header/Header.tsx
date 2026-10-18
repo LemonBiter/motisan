@@ -30,10 +30,10 @@ export default function Header() {
         <div className="mx-auto flex h-12 max-w-[1440px] items-center justify-between px-5 text-sm lg:px-8">
           {/* Left */}
           <div className="flex items-center gap-8">
-            <div className="flex items-center gap-2 text-white/90">
+            {/* <div className="flex items-center gap-2 text-white/90">
               <MapPin className="h-4 w-4" />
               <span>66 Export Drive, East Arm, NT 0822</span>
-            </div>
+            </div> */}
 
             <div className="flex items-center gap-2 text-white/90">
               <Mail className="h-4 w-4" />
@@ -78,9 +78,9 @@ export default function Header() {
               height={70}
               priority
             />
-            <p className="hidden text-[10px] mt-2 tracking-[0.3em] text-gray-400 lg:block">
+            {/* <p className="hidden text-[10px] mt-2 tracking-[0.3em] text-gray-400 lg:block">
               MODULAR ACCESS. BUILT BETTER.
-            </p>
+            </p> */}
           </div>
         </Link>
         <nav className="hidden items-center gap-12 lg:flex">
