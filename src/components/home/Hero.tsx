@@ -96,11 +96,12 @@ export default function Hero() {
     <section className="bg-white">
       <div className="relative overflow-hidden border-b border-gray-200 bg-[#f5f7fb]">
         <Image
-          src="/img/homepage-bg3.png"
+          // src="/img/homepage-bg3.png"
+          src="/img/homepage-bg4.png"
           alt="Industrial insulated panel access system"
           fill
           priority
-          className="object-cover object-center"
+          className="object-cover object-left"
         />
         {/* <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 to-white/45" /> */}
         {/* <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white to-transparent" /> */}
@@ -149,7 +150,7 @@ export default function Hero() {
             </div>
           </div>
 
-          <div className="flex justify-center lg:justify-end">
+          {/* <div className="flex justify-center lg:justify-end">
             <div className="w-full max-w-[620px]">
               <div className="relative h-[520px] sm:h-[560px] lg:h-[520px]">
                 {featuredProducts.map((product, index) => {
@@ -230,7 +231,7 @@ export default function Hero() {
                 </button>
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
 

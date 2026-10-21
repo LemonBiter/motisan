@@ -27,7 +27,6 @@ export default function ProductsSection() {
             product.category === activeCategory ||
             product.type === activeCategory,
         );
-  console.log(activeCategory, filteredProducts);
   return (
     <section className="bg-[#fafafa] py-28">
       <div className="mx-auto max-w-[1440px] px-5 lg:px-8">

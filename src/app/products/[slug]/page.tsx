@@ -90,7 +90,6 @@ export default async function ProductPage({
     return <ProductComingSoon />;
   }
 
-  console.log(product);
 
   return (
     <main className="bg-white">
