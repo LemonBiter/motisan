@@ -138,7 +138,7 @@ export default function Hero() {
               </Link>
             </div>
 
-            <div className="mt-10 flex flex-nowrap gap-3 whitespace-nowrap">
+            {/* <div className="mt-10 flex flex-nowrap gap-3 whitespace-nowrap">
               {heroStats.map((item) => (
                 <span
                   key={item}
@@ -147,7 +147,7 @@ export default function Hero() {
                   {item}
                 </span>
               ))}
-            </div>
+            </div> */}
           </div>
 
           {/* <div className="flex justify-center lg:justify-end">
