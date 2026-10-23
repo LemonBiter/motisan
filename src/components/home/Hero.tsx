@@ -101,13 +101,13 @@ export default function Hero() {
           alt="Industrial insulated panel access system"
           fill
           priority
-          className="object-cover object-left"
+          className="object-cover object-right"
         />
         {/* <div className="absolute inset-0 bg-gradient-to-r from-white via-white/92 to-white/45" /> */}
         {/* <div className="absolute inset-x-0 bottom-0 h-28 bg-gradient-to-t from-white to-transparent" /> */}
 
         <div className="relative mx-auto grid min-h-[620px] max-w-[1440px] items-center gap-10 px-5 py-16 lg:grid-cols-[0.95fr_1.05fr] lg:px-10 lg:py-20">
-          <div className="max-w-[680px]">
+          <div className="absolute left-0 top-0 max-w-[580px]">
             {/* <p className="mb-5 text-sm font-bold uppercase tracking-[0.18em] text-[#00347d]">
               Modular access. Built better.
             </p> */}
@@ -116,7 +116,7 @@ export default function Hero() {
               Enhancing a better insulated panel system.
             </h1>
 
-            <p className="mt-7 max-w-[620px] text-lg leading-8 text-slate-700">
+            <p className="mt-7 max-w-[460px] text-lg leading-8 text-slate-700 text-black">
               Motisan delivers innovative, practical solutions for insulated panel systems. Through smarter product design, we help manufacturers and installers streamline production, simplify installation and enhance the overall performance of insulated panel systems.
             </p>
 
@@ -138,7 +138,7 @@ export default function Hero() {
               </Link>
             </div>
 
-            <div className="mt-10 flex flex-wrap gap-3">
+            <div className="mt-10 flex flex-nowrap gap-3 whitespace-nowrap">
               {heroStats.map((item) => (
                 <span
                   key={item}
